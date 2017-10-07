@@ -106,6 +106,11 @@ public class WebController {
 		// with the URL: http://localhost:8080/
 		return "Testing seperate pings.";
 	}
+	
+	@RequestMapping(value = "/cs480/nicole", method = RequestMethod.GET)
+	String nicoleSecretText() {
+		return "WOW You've found Nicole's Secret Text";
+	}
 
 	/**
 	 * This API deletes the user. It uses HTTP DELETE method.
