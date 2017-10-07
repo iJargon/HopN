@@ -98,6 +98,14 @@ public class WebController {
 		userManager.updateUser(user);
 		return user;
 	}
+	
+	@RequestMapping(value = "/cs480/iJargon", method = RequestMethod.GET)
+	String alive() {
+		// You can replace this with other string,
+		// and run the application locally to check your changes
+		// with the URL: http://localhost:8080/
+		return "Testing seperate pings.";
+	}
 
 	/**
 	 * This API deletes the user. It uses HTTP DELETE method.
