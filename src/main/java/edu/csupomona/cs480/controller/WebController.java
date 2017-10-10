@@ -117,6 +117,11 @@ public class WebController {
 		return "Assignment 3 Part 3 is Running";
 	}
 	
+	@RequestMapping(value = "/cs480/gretchen", method = RequestMethod.GET)
+	String nandita() {
+		return "whoop whoop here's part 3???";
+	}
+	
 	/**
 	 * This API deletes the user. It uses HTTP DELETE method.
 	 *
