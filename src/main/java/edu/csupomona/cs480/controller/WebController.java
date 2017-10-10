@@ -118,7 +118,7 @@ public class WebController {
 	}
 	
 	@RequestMapping(value = "/cs480/gretchen", method = RequestMethod.GET)
-	String nandita() {
+	String gretchysString() {
 		return "whoop whoop here's part 3???";
 	}
 	
