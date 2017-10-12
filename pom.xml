@@ -61,6 +61,13 @@
 			<artifactId>guava</artifactId>
 			<version>23.1-jre</version>
 		</dependency>
+		
+		<dependency>
+    		<groupId>com.google.maps</groupId>
+    		<artifactId>google-maps-services</artifactId>
+    		<version>0.2.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
