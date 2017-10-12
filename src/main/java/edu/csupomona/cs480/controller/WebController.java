@@ -14,6 +14,13 @@ import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.UserManager;
 
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 
 /**
  * This is the controller used by Spring framework.
@@ -24,6 +31,8 @@ import edu.csupomona.cs480.data.provider.UserManager;
  */
 
 @RestController
+
+
 public class WebController {
 
 	/**
@@ -143,6 +152,7 @@ public class WebController {
 		return userManager.listAllUsers();
 	}
 
+	
 	/*********** Web UI Test Utility **********/
 	/**
 	 * This method provide a simple web UI for you to test the different
