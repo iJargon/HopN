@@ -16,6 +16,13 @@ import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.UserManager;
 
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 
 /**
  * This is the controller used by Spring framework.
@@ -26,6 +33,8 @@ import edu.csupomona.cs480.data.provider.UserManager;
  */
 
 @RestController
+
+
 public class WebController {
 
 	/**
@@ -118,8 +127,10 @@ public class WebController {
 	}
 
 	@RequestMapping(value = "/cs480/nandita", method = RequestMethod.GET)
-	String nandita() {
-		return "Assignment 3 Part 3 is Running";
+	String nandita() throws IOException {
+		Document doc = Jsoup.connect("http://en.wikipedia.org/").get();
+		Elements newsHeadlines = doc.select("#mp-itn b a");
+		return ("LATEST NEWS HEADLINES" + "\n" + newsHeadlines);
 	}
 	
 	@RequestMapping(value = "/cs480/gretchen", method = RequestMethod.GET)
@@ -148,6 +159,7 @@ public class WebController {
 		return userManager.listAllUsers();
 	}
 
+	
 	/*********** Web UI Test Utility **********/
 	/**
 	 * This method provide a simple web UI for you to test the different
