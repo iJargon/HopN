@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.common.base.Joiner;
+
 import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.UserManager;
@@ -116,9 +118,12 @@ public class WebController {
 		return "Testing seperate pings.";
 	}
 	
+	// changing to use Joiner from google guava
 	@RequestMapping(value = "/cs480/nicole", method = RequestMethod.GET)
 	String nicoleSecretText() {
-		return "WOW You've found Nicole's Secret Text";
+		// will join specified parameters with specified joiner
+		Joiner joiner = Joiner.on(" | ").skipNulls();
+		return joiner.join("Nicole", "Loves", null, "Chicken", "Nuggets", null);
 	}
 
 	@RequestMapping(value = "/cs480/nandita", method = RequestMethod.GET)
