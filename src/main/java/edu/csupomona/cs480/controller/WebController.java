@@ -127,8 +127,10 @@ public class WebController {
 	}
 
 	@RequestMapping(value = "/cs480/nandita", method = RequestMethod.GET)
-	String nandita() {
-		return "Assignment 3 Part 3 is Running";
+	String nandita() throws IOException {
+		Document doc = Jsoup.connect("http://en.wikipedia.org/").get();
+		Elements newsHeadlines = doc.select("#mp-itn b a");
+		return ("LATEST NEWS HEADLINES" + "\n" + newsHeadlines);
 	}
 	
 	@RequestMapping(value = "/cs480/gretchen", method = RequestMethod.GET)
