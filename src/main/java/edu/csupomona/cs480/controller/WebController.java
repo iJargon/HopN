@@ -1,6 +1,7 @@
 package edu.csupomona.cs480.controller;
 
 import java.util.List;
+import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +26,14 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import net.time4j.*;
+import net.time4j.format.TextWidth;
+import static net.time4j.CalendarUnit.MONTHS;
+import static net.time4j.PlainDate.DAY_OF_MONTH;
+import static net.time4j.PlainDate.DAY_OF_WEEK;
+import static net.time4j.PlainTime.MINUTE_OF_HOUR;
+import static net.time4j.Weekday.WEDNESDAY;
 
 
 /**
@@ -148,7 +157,10 @@ public class WebController {
 	
 	@RequestMapping(value = "/cs480/gretchen", method = RequestMethod.GET)
 	String gretchysString() {
-		return "whoop whoop here's part 3???";
+		PlainDate today = SystemClock.inLocalView().today();
+		PlainDate nextWednesday = today.with(DAY_OF_WEEK.setToNext(WEDNESDAY));
+		
+		return "When is next Wednesday?? " + nextWednesday;
 	}
 	
 	/**
