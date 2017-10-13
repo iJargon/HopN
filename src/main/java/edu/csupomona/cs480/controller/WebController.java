@@ -12,6 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.google.common.base.Joiner;
 
+import org.apache.commons.math.stat.DescriptiveStatistics;
+import org.apache.commons.math.stat.SummaryStatistics;
+
 import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.UserManager;
@@ -110,12 +113,22 @@ public class WebController {
 		return user;
 	}
 	
-	@RequestMapping(value = "/cs480/iJargon", method = RequestMethod.GET)
-	String alive() {
+	@RequestMapping(value = "/cs480/john", method = RequestMethod.GET)
+	double john() {
 		// You can replace this with other string,
 		// and run the application locally to check your changes
 		// with the URL: http://localhost:8080/
-		return "Testing seperate pings.";
+		//return "Testing seperate pings.";
+		DescriptiveStatistics stats = new DescriptiveStatistics();
+		int[] inputArray = new int[9];
+		
+		for( int i = 0; i < 10; i++) {
+				stats.addValue(inputArray[i]);
+		}
+
+		// Compute some statistics
+		 double mean = stats.getMean();
+		 return mean;
 	}
 	
 	// changing to use Joiner from google guava
