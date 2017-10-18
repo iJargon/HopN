@@ -23,4 +23,18 @@ public class ResourceResolver {
 		}
 		return file;
 	}
+	
+	/**
+	 * Get the file used to store the event object JSON
+	 *
+	 * @param eventId
+	 * @return
+	 */
+	public static File getEventFile() {
+		File file = new File(BASE_DIR + "/" + "event-map.json");
+		if (!file.getParentFile().exists()) {
+			file.getParentFile().mkdirs();
+		}
+		return file;
+	}
 }
