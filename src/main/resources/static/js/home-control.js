@@ -28,7 +28,7 @@ function deleteUser(userId) {
 					location.reload();
 				},
 				error: function (jqXHR, exception) {
-					alert("Failed to delete the photo.");
+					alert("Failed to delete the user.");
 				}
 			});
 }
@@ -81,4 +81,50 @@ function getUser(userId) {
 	} else {
 		alert("Invalid user Id");
 	}
+}
+
+function deleteEvent(eventId) {
+	$.ajax(
+			{
+				type : "DELETE",
+				url  : "/cs480/event/" + eventId,
+				data : {
+				},
+				success : function(result) {
+					location.reload();
+				},
+				error: function (jqXHR, exception) {
+					alert("Failed to delete the event.");
+				}
+			});
+}
+
+function addEvent() {
+
+	var eventID = $('#input_event_id').val();
+	var eventName = $('#input_event_name').val();
+	var eventLocation = $('#input_event_location').val();
+	var eventDate = $('#input_event_date').val();
+	var eventStart = $('#input_event_start_time').val();
+	var eventEnd = $('#input_event_end_time').val();
+
+	$.ajax(
+		{
+			type : "POST",
+			url  : "/cs480/event/" + eventID,
+			data : {
+					"event_name" : eventName,
+					"location" : eventLocation,
+					"date" : eventDate,
+					"start_time" : eventStart,
+					"end_time" : eventEnd
+			},
+			success : function(result) {
+				location.reload();
+			},
+			error: function (jqXHR, exception) {
+				alert("Failed to add the event. Please check the inputs.");
+			}
+	});	
+
 }

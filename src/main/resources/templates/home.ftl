@@ -84,6 +84,64 @@
         </div>
     </div>
     
+    <hr>
+    
+    <div>
+        <div>
+            <label>Event List</label>
+            <table border="1">            
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td> 
+                    <td>Location</td> 
+                    <td>Date</td>
+                    <td>Start Time</td>
+                    <td>End Time</td>
+                    <td>Delete</td>
+                </tr>
+                <#list events as event>
+                        <tr>
+                            <td>${event.id}</td>
+                            <td>${event.name}</td>
+                            <td>${event.location}</td>
+                            <td>${event.date}</td>
+                            <td>${event.start_time}</td>
+                            <td>${event.end_time}</td>
+                            <td><button onclick="deleteEvent('${event.id}')">Delete</button></td>
+                        </tr>
+                </#list>
+            </table>
+        </div>
+        
+        <hr>
+        
+        <div>
+            <label>Add Event</label>
+            <table border="1">
+                <tr>
+                    <td>Event ID</td>
+                    <td>Name</td> 
+                    <td>Location</td>                     
+                    <td>Date</td>
+                    <td>Start Time</td>
+                    <td>End Time</td>
+                </tr>                
+                <tr>
+                    <td><input type="text" id="input_event_id"></td>
+                    <td><input type="text" id="input_event_name"></td>
+                    <td><input type="text" id="input_event_location"></td>
+                    <td><input type="text" id="input_event_date"></td> 
+                    <td><input type="text" id="input_event_start_time"></td> 
+                    <td><input type="text" id="input_event_end_time"></td>                     
+                    <td><button onclick="addEvent()">Add</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+    </div>
+    
     
 </body>
 

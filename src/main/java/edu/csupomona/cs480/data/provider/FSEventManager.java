@@ -64,7 +64,7 @@ public class FSEventManager implements EventManager {
 	}
 
 	@Override
-	public Event getEvent(int eventId) {
+	public Event getEvent(String eventId) {
 		EventMap eventMap = getEventMap();
 		return eventMap.get(eventId);
 	}
@@ -77,7 +77,7 @@ public class FSEventManager implements EventManager {
 	}
 
 	@Override
-	public void deleteEvent(int eventID) {
+	public void deleteEvent(String eventID) {
 		EventMap eventMap = getEventMap();
 		eventMap.remove(eventID);
 		persistEventMap(eventMap);		

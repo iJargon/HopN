@@ -16,6 +16,6 @@ import java.util.HashMap;
  *
  */
 @SuppressWarnings("serial")
-public class EventMap extends HashMap<Integer, Event>{
+public class EventMap extends HashMap<String, Event>{
 
 }

@@ -4,27 +4,12 @@ package edu.csupomona.cs480.data;
  * 	Event object
  */
 public class Event {
-	private	int total;
-	private int eventID;
+	private String eventID;
 	private String name;
 	private String location;
 	private String date;
 	private String start_time;
 	private String end_time;
-	
-	public Event() {
-		// unique eventID automatically given at creation of an event
-		total++;
-		this.eventID = total;
-	}
-
-	public int getTotal() {
-		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
-	}
 
 	public String getName() {
 		return name;
@@ -66,7 +51,11 @@ public class Event {
 		this.end_time = end_time;
 	}
 
-	public int getEventID() {
+	public String getEventID() {
 		return eventID;
+	}
+	
+	public void setEventID(String eventID) {
+		this.eventID = eventID;
 	}
 }

@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import edu.csupomona.cs480.data.provider.EventManager;
+import edu.csupomona.cs480.data.provider.FSEventManager;
 import edu.csupomona.cs480.data.provider.FSUserManager;
 import edu.csupomona.cs480.data.provider.UserManager;
 
@@ -24,6 +26,12 @@ public class App {
     public UserManager userManager() {
         UserManager userManager = new FSUserManager();
         return userManager;
+    }
+    
+    @Bean
+    public EventManager eventManager() {
+    		EventManager eventManager = new FSEventManager();
+    		return eventManager;
     }
 
     /**

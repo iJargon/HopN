@@ -14,7 +14,7 @@ public interface EventManager {
 	 * @param eventId
 	 * @return the Event object
 	 */
-	public Event getEvent(int eventId);
+	public Event getEvent(String eventId);
 
 	/**
 	 * Update the given event object and persist it.
@@ -33,7 +33,7 @@ public interface EventManager {
 	 *
 	 * @param eventID
 	 */
-	public void deleteEvent(int eventID);
+	public void deleteEvent(String eventID);
 
 	/**
 	 * List all the current events in the storage.

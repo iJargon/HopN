@@ -17,7 +17,9 @@ import org.apache.commons.math.stat.DescriptiveStatistics;
 import org.apache.commons.math.stat.SummaryStatistics;
 
 import edu.csupomona.cs480.App;
+import edu.csupomona.cs480.data.Event;
 import edu.csupomona.cs480.data.User;
+import edu.csupomona.cs480.data.provider.EventManager;
 import edu.csupomona.cs480.data.provider.UserManager;
 
 import java.io.IOException;
@@ -59,6 +61,9 @@ public class WebController {
 	 */
 	@Autowired
 	private UserManager userManager;
+	
+	@Autowired
+	private EventManager eventManager;
 
 	/**
 	 * This is a simple example of how the HTTP API works.
@@ -89,6 +94,12 @@ public class WebController {
 	User getUser(@PathVariable("userId") String userId) {
 		User user = userManager.getUser(userId);
 		return user;
+	}
+	
+	@RequestMapping(value = "/cs480/event/{eventId}", method = RequestMethod.GET)
+	Event getEvent(@PathVariable("eventId") String eventId) {
+		Event event = eventManager.getEvent(eventId);
+		return event;
 	}
 
 	/**
@@ -122,7 +133,26 @@ public class WebController {
 		return user;
 	}
 	
-	@RequestMapping(value = "/cs480/john", method = RequestMethod.GET)
+	@RequestMapping(value = "/cs480/event/{eventId}", method = RequestMethod.POST)
+	Event updateEvent(
+			@PathVariable("eventID") String id,
+			@RequestParam("event_name") String name,
+			@RequestParam("location") String location,
+			@RequestParam("date") String date,
+			@RequestParam("start_time") String start,
+			@RequestParam("end_time") String end) {
+		Event event = new Event();
+		event.setEventID(id);
+		event.setName(name);
+		event.setLocation(location);
+		event.setDate(date);
+		event.setStart_time(start);
+		event.setEnd_time(end);
+		eventManager.updateEvent(event);
+		return event;
+	}
+	
+/*	@RequestMapping(value = "/cs480/john", method = RequestMethod.GET)
 	double john() {
 		// You can replace this with other string,
 		// and run the application locally to check your changes
@@ -161,7 +191,7 @@ public class WebController {
 		PlainDate nextWednesday = today.with(DAY_OF_WEEK.setToNext(WEDNESDAY));
 		
 		return "When is next Wednesday?? " + nextWednesday;
-	}
+	}*/
 	
 	/**
 	 * This API deletes the user. It uses HTTP DELETE method.
@@ -173,6 +203,12 @@ public class WebController {
 			@PathVariable("userId") String userId) {
 		userManager.deleteUser(userId);
 	}
+	
+	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.DELETE)
+	void deleteEvent(
+			@PathVariable("eventID") String eventId) {
+		eventManager.deleteEvent(eventId);
+	}
 
 	/**
 	 * This API lists all the users in the current database.
@@ -183,6 +219,11 @@ public class WebController {
 	List<User> listAllUsers() {
 		return userManager.listAllUsers();
 	}
+	
+	@RequestMapping(value = "/cs480/events/list", method = RequestMethod.GET)
+	List<Event> listAllEvents() {
+		return eventManager.listAllEvents();
+	}
 
 	
 	/*********** Web UI Test Utility **********/
@@ -191,9 +232,10 @@ public class WebController {
 	 * functionalities used in this web service.
 	 */
 	@RequestMapping(value = "/cs480/home", method = RequestMethod.GET)
-	ModelAndView getUserHomepage() {
+	ModelAndView getHomepage() {
 		ModelAndView modelAndView = new ModelAndView("home");
 		modelAndView.addObject("users", listAllUsers());
+		modelAndView.addObject("events", listAllEvents());
 		return modelAndView;
 	}
 
