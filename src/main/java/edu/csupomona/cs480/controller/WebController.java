@@ -177,15 +177,16 @@ public class WebController {
 		Joiner joiner = Joiner.on(" | ").skipNulls();
 		return joiner.join("Nicole", "Loves", null, "Chicken", "Nuggets", null);
 	}
-
+*/
 	@RequestMapping(value = "/cs480/nandita", method = RequestMethod.GET)
+	public static
 	String nandita() throws IOException {
 		Document doc = Jsoup.connect("http://en.wikipedia.org/").get();
 		Elements newsHeadlines = doc.select("#mp-itn b a");
 		return ("LATEST NEWS HEADLINES" + "\n" + newsHeadlines);
 	}
 	
-	@RequestMapping(value = "/cs480/gretchen", method = RequestMethod.GET)
+/*	@RequestMapping(value = "/cs480/gretchen", method = RequestMethod.GET)
 	String gretchysString() {
 		PlainDate today = SystemClock.inLocalView().today();
 		PlainDate nextWednesday = today.with(DAY_OF_WEEK.setToNext(WEDNESDAY));
