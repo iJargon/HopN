@@ -18,7 +18,7 @@ public class UserManagerTest {
 		user.setMajor("Psychology");
 		usermanager.updateUser(user);
 		
-		assertEquals("BM", usermanager.getUser("010294782").getName());
+		assertEquals("Matthew Kim", usermanager.getUser("010294782").getName());
 	}
 	
 	@Test
@@ -30,7 +30,7 @@ public class UserManagerTest {
 		user.setMajor("ECE");
 		usermanager.updateUser(user);
 		
-		assertEquals(user, usermanager.getUser("010551438").getMajor());
+		assertEquals("ECE", usermanager.getUser("010551438").getMajor());
 	}
 	
 	@Test
