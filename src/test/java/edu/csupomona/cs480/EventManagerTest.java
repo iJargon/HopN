@@ -2,7 +2,6 @@ package edu.csupomona.cs480;
 
 import static org.junit.Assert.*;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import edu.csupomona.cs480.data.Event;

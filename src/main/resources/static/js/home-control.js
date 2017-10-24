@@ -128,3 +128,29 @@ function addEvent() {
 	});	
 
 }
+
+function getEvent(eventId) {
+	var eventId = $('#query_event_id').val();
+	if (eventId) {
+		$.ajax(
+				{
+					type : "GET",
+					url  : "/cs480/event/" + eventId,
+					data : {
+					},
+					success : function(result) {
+						$('#result_event_id').text(result.eventID);
+						$('#result_event_name').text(result.name);
+						$('#result_location').text(result.location);
+						$('#result_date').text(result.date);
+						$('#result_start_time').text(result.start_time);
+						$('#result_end_time').text(result.end_time);
+					},
+					error: function (jqXHR, exception) {
+						alert("Failed to get the event.");
+					}
+				});
+	} else {
+		alert("Invalid event Id");
+	}
+}

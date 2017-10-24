@@ -101,13 +101,13 @@
                 </tr>
                 <#list events as event>
                         <tr>
-                            <td>${event.id}</td>
+                            <td>${event.eventID}</td>
                             <td>${event.name}</td>
                             <td>${event.location}</td>
                             <td>${event.date}</td>
                             <td>${event.start_time}</td>
                             <td>${event.end_time}</td>
-                            <td><button onclick="deleteEvent('${event.id}')">Delete</button></td>
+                            <td><button onclick="deleteEvent('${event.eventID}')">Delete</button></td>
                         </tr>
                 </#list>
             </table>
@@ -139,6 +139,33 @@
         </div>
 
         <hr>
+        
+        <div>
+            <label>Query Event</label>
+            <input type="text" id="query_event_id"><button onclick="getEvent()">Get</button>
+            <table border="1">
+                <tr>
+                    <td>Event ID</td>
+                    <td>Name</td>
+                    <td>Location</td>
+                    <td>Date</td>
+                    <td>Start Time</td>
+                    <td>End Time</td>
+                </tr>
+                <tr>
+                    <td><label id="result_event_id"></td>
+                    <td><label id="result_event_name"></td>
+                    <td><label id="result_location"></td>
+                    <td><label id="result_date"></td>
+                    <td><label id="result_start_time"></td>
+                    <td><label id="result_end_time"></td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    
+    <hr>
 
     </div>
     
