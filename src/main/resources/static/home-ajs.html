@@ -80,6 +80,85 @@
 	                </tr>
 	            </table>
 	        </div>
+		</div>
+		
+		<hr>
+
+		<div>
+	        <div>
+	            <label>Event List</label>
+	            <table border="1">
+	                <tr>
+	                    <td>ID</td>
+	                    <td>Name</td>
+	                    <td>Location</td>
+	                    <td>Date</td>
+						<td>Start Time</td>
+						<td>End Time</td>
+						<td>Delete</td>						
+	                </tr>
+
+	                <tr ng-repeat="event in events">
+	                    <td>{{event.eventId}}</td>
+	                    <td>{{event.name}}</td>
+	                    <td>{{event.location}}</td>
+						<td>{{event.date}}</td>
+						<td>{{event.start_time}}</td>
+						<td>{{event.end_time}}</td>
+                        <td><button ng-click="deleteEvent(event.eventId)">Delete</button></td>
+	                </tr>
+	            </table>
+	        </div>
+
+	        <hr>
+
+	        <div>
+	            <label>Add Event</label>
+	            <table border="1">
+	                <tr>
+	                    <td>ID</td>
+	                    <td>Name</td>
+	                    <td>Location</td>
+	                    <td>Date</td>
+						<td>Start Time</td>
+						<td>End Time</td>
+	                </tr>
+	                <tr>
+	                    <td><input type="text" ng-model="new_eventId"></td>
+	                    <td><input type="text" ng-model="new_name"></td>
+						<td><input type="text" ng-model="new_location"></td>
+						<td><input type="text" ng-model="new_date"></td>
+						<td><input type="text" ng-model="new_start_time"></td>
+						<td><input type="text" ng-model="new_end_time"></td>
+	                    <td><button ng-click="addEvent()">Add</button></td>
+	                </tr>
+	            </table>
+	        </div>
+
+	        <hr>
+
+	        <div>
+	            <label>Query Event</label>
+	            <input type="text" id="query_id" ng-model="eventIdToSearch"><button ng-click="getEvent()">Get</button>
+	            <table border="1">
+	                <tr>
+	                    <td>ID</td>
+	                    <td>Name</td>
+	                    <td>Location</td>
+	                    <td>Date</td>
+						<td>Start Time</td>
+						<td>End Time</td>
+	                </tr>
+	                <tr>
+	                    <td><label>{{foundevent.eventId}}</label></td>
+	                    <td><label>{{foundevent.name}}</label></td>
+						<td><label>{{foundevent.location}}</label></td>
+						<td><label>{{foundevent.date}}</label></td>
+	                    <td><label>{{foundevent.start_time}}</label></td>
+	                    <td><label>{{foundevent.end_time}}</label></td>						
+	                </tr>
+	            </table>
+	        </div>
 	    </div>
 
 	</body>

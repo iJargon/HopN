@@ -40,9 +40,9 @@ cs480App.controller('UserCtrl', function ($scope, $http) {
   }
 
   $scope.addEvent = function() {
-	$http.post("cs480/event/" + $scope.new_id + "?name=" + $scope.new_name)
+	$http.post("cs480/event/" + $scope.new_eventId + "?name=" + $scope.new_name + "&location" + $scope.new_location + "&date" + $scope.new_date + "&start_time" + $scope.new_start_time + "&end_time" + $scope.new_end_time)
 		.success(function(data){
-			$scope.loadEventss();
+			$scope.loadEvents();
 		});
 }
 
