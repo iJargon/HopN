@@ -83,11 +83,11 @@ function getUser(userId) {
 	}
 }
 
-function deleteEvent(eventId) {
+function deleteEvent(eventID) {
 	$.ajax(
 			{
 				type : "DELETE",
-				url  : "/cs480/event/" + eventId,
+				url  : "/cs480/event/" + eventID,
 				data : {
 				},
 				success : function(result) {
@@ -101,7 +101,7 @@ function deleteEvent(eventId) {
 
 function addEvent() {
 
-	var eventID = $('#input_event_id').val();
+	var eventID = $('#input_eventID').val();
 	var eventName = $('#input_event_name').val();
 	var eventLocation = $('#input_event_location').val();
 	var eventDate = $('#input_event_date').val();
@@ -130,7 +130,7 @@ function addEvent() {
 }
 
 function getEvent(eventId) {
-	var eventId = $('#query_event_id').val();
+	var eventId = $('#query_eventID').val();
 	if (eventId) {
 		$.ajax(
 				{
@@ -139,7 +139,7 @@ function getEvent(eventId) {
 					data : {
 					},
 					success : function(result) {
-						$('#result_event_id').text(result.eventID);
+						$('#result_eventID').text(result.eventID);
 						$('#result_event_name').text(result.name);
 						$('#result_location').text(result.location);
 						$('#result_date').text(result.date);

@@ -47,8 +47,6 @@ import static net.time4j.Weekday.WEDNESDAY;
  */
 
 @RestController
-
-
 public class WebController {
 
 	/**
@@ -96,9 +94,9 @@ public class WebController {
 		return user;
 	}
 	
-	@RequestMapping(value = "/cs480/event/{eventId}", method = RequestMethod.GET)
-	Event getEvent(@PathVariable("eventId") String eventId) {
-		Event event = eventManager.getEvent(eventId);
+	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.GET)
+	Event getEvent(@PathVariable("eventID") String eventID) {
+		Event event = eventManager.getEvent(eventID);
 		return event;
 	}
 
@@ -133,7 +131,7 @@ public class WebController {
 		return user;
 	}
 	
-	@RequestMapping(value = "/cs480/event/{eventId}", method = RequestMethod.POST)
+	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST)
 	Event updateEvent(
 			@PathVariable("eventID") String id,
 			@RequestParam("event_name") String name,
@@ -207,8 +205,8 @@ public class WebController {
 	
 	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.DELETE)
 	void deleteEvent(
-			@PathVariable("eventID") String eventId) {
-		eventManager.deleteEvent(eventId);
+			@PathVariable("eventID") String eventID) {
+		eventManager.deleteEvent(eventID);
 	}
 
 	/**

@@ -127,7 +127,7 @@
                     <td>End Time</td>
                 </tr>                
                 <tr>
-                    <td><input type="text" id="input_event_id"></td>
+                    <td><input type="text" id="input_eventID"></td>
                     <td><input type="text" id="input_event_name"></td>
                     <td><input type="text" id="input_event_location"></td>
                     <td><input type="text" id="input_event_date"></td> 
@@ -142,7 +142,7 @@
         
         <div>
             <label>Query Event</label>
-            <input type="text" id="query_event_id"><button onclick="getEvent()">Get</button>
+            <input type="text" id="query_eventID"><button onclick="getEvent()">Get</button>
             <table border="1">
                 <tr>
                     <td>Event ID</td>
@@ -153,7 +153,7 @@
                     <td>End Time</td>
                 </tr>
                 <tr>
-                    <td><label id="result_event_id"></td>
+                    <td><label id="result_eventID"></td>
                     <td><label id="result_event_name"></td>
                     <td><label id="result_location"></td>
                     <td><label id="result_date"></td>

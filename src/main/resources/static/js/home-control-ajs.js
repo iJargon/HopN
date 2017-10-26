@@ -2,7 +2,7 @@
 // This is the trending technology
 var cs480App = angular.module('cs480App', []);
 
-cs480App.controller('UserCtrl', function ($scope, $http) {
+cs480App.controller('Ctrl', function ($scope, $http) {
 
   $scope.loadUsers = function() {
 	  $http.get("cs480/users/list")
@@ -40,11 +40,11 @@ cs480App.controller('UserCtrl', function ($scope, $http) {
   }
 
   $scope.addEvent = function() {
-	$http.post("cs480/event/" + $scope.new_eventId + "?name=" + $scope.new_name + "&location" + $scope.new_location + "&date" + $scope.new_date + "&start_time" + $scope.new_start_time + "&end_time" + $scope.new_end_time)
+	$http.post("cs480/event/" + $scope.new_eventID + "?name=" + $scope.new_event_name + "&location" + $scope.new_location + "&date" + $scope.new_date + "&start_time" + $scope.new_start_time + "&end_time" + $scope.new_end_time)
 		.success(function(data){
 			$scope.loadEvents();
 		});
-}
+	}
 
   $scope.deleteUser = function(userId) {
 	  $http.delete("cs480/user/" + userId)
@@ -53,8 +53,8 @@ cs480App.controller('UserCtrl', function ($scope, $http) {
 	  	});
 	}
 	
-	$scope.deleteEvent = function(eventId) {
-	  $http.delete("cs480/event/" + eventId)
+	$scope.deleteEvent = function(eventID) {
+	  $http.delete("cs480/event/" + eventID)
 	  	.success(function(data){
 	  		$scope.loadEvents();
 	  	});
