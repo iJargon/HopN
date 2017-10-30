@@ -15,7 +15,9 @@ public class UserManagerTest {
 		User user = new User();
 		user.setId("010294782");
 		user.setName("Matthew Kim");
-		user.setMajor("Psychology");
+		user.setUsername("KARDBM");
+		user.setPassword("king");
+		user.setPhone("218-459-0254");
 		usermanager.updateUser(user);
 		
 		assertEquals("Matthew Kim", usermanager.getUser("010294782").getName());
@@ -27,10 +29,12 @@ public class UserManagerTest {
 		User user = new User();
 		user.setId("010551438");
 		user.setName("John Doe");
-		user.setMajor("ECE");
+		user.setUsername("j0hnd0e");
+		user.setPassword("alsdfbaekf");
+		user.setPhone("524-896-1345");
 		usermanager.updateUser(user);
 		
-		assertEquals("ECE", usermanager.getUser("010551438").getMajor());
+		assertEquals("524-896-1345", usermanager.getUser("010551438").getPhone());
 	}
 	
 	@Test
@@ -39,7 +43,9 @@ public class UserManagerTest {
 		User user = new User();
 		user.setId("010350834");
 		user.setName("Mary Kate");
-		user.setMajor("Hospitality");
+		user.setUsername("mknoashley");
+		user.setPassword("twin1");
+		user.setPhone("123-456-7890");
 		usermanager.updateUser(user);
 		usermanager.deleteUser(user.getId());
 		

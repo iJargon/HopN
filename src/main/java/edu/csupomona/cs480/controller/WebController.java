@@ -115,18 +115,24 @@ public class WebController {
 	 *
 	 * @param id
 	 * @param name
-	 * @param major
+	 * @param username
+	 * @param password
+	 * @param phone
 	 * @return
 	 */
 	@RequestMapping(value = "/cs480/user/{userId}", method = RequestMethod.POST)
 	User updateUser(
 			@PathVariable("userId") String id,
 			@RequestParam("name") String name,
-			@RequestParam(value = "major", required = false) String major) {
+			@RequestParam("username") String username,
+			@RequestParam("password") String password,
+			@RequestParam("phone") String phone) {
 		User user = new User();
 		user.setId(id);
-		user.setMajor(major);
 		user.setName(name);
+		user.setUsername(username);
+		user.setPassword(password);
+		user.setPhone(phone);
 		userManager.updateUser(user);
 		return user;
 	}
