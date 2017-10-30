@@ -1,6 +1,6 @@
 package edu.csupomona.cs480.data;
 
-import java.util.Date;
+//import java.util.Date;
 
 
 /**
@@ -15,13 +15,13 @@ public class User {
     private String phone;
     
     /** The timestamp when the user is being created */
-    private String creationTime = new Date(System.currentTimeMillis()).toString();
+    //private String creationTime = new Date(System.currentTimeMillis()).toString();
 
-    public String getId() {
+    public String getUserID() {
         return userID;
     }
 
-    public void setId(String userID) {
+    public void setUserID(String userID) {
         this.userID = userID;
     }
 
@@ -33,13 +33,13 @@ public class User {
 		this.name = name;
 	}
 
-	public String getCreationTime() {
-		return creationTime;
-	}
-
-	public void setCreationTime(String creationTime) {
-		this.creationTime = creationTime;
-	}
+//	public String getCreationTime() {
+//		return creationTime;
+//	}
+//
+//	public void setCreationTime(String creationTime) {
+//		this.creationTime = creationTime;
+//	}
 
 	public String getUsername() {
 		return username;

@@ -88,9 +88,9 @@ public class WebController {
 	 * Try it in your web browser:
 	 * 	http://localhost:8080/cs480/user/user101
 	 */
-	@RequestMapping(value = "/cs480/user/{userId}", method = RequestMethod.GET)
-	User getUser(@PathVariable("userId") String userId) {
-		User user = userManager.getUser(userId);
+	@RequestMapping(value = "/cs480/user/{userID}", method = RequestMethod.GET)
+	User getUser(@PathVariable("userID") String userID) {
+		User user = userManager.getUser(userID);
 		return user;
 	}
 	
@@ -120,15 +120,15 @@ public class WebController {
 	 * @param phone
 	 * @return
 	 */
-	@RequestMapping(value = "/cs480/user/{userId}", method = RequestMethod.POST)
+	@RequestMapping(value = "/cs480/user/{userID}", method = RequestMethod.POST)
 	User updateUser(
-			@PathVariable("userId") String id,
+			@PathVariable("userID") String id,
 			@RequestParam("name") String name,
 			@RequestParam("username") String username,
 			@RequestParam("password") String password,
 			@RequestParam("phone") String phone) {
 		User user = new User();
-		user.setId(id);
+		user.setUserID(id);
 		user.setName(name);
 		user.setUsername(username);
 		user.setPassword(password);
@@ -203,10 +203,10 @@ public class WebController {
 	 *
 	 * @param userId
 	 */
-	@RequestMapping(value = "/cs480/user/{userId}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/cs480/user/{userID}", method = RequestMethod.DELETE)
 	void deleteUser(
-			@PathVariable("userId") String userId) {
-		userManager.deleteUser(userId);
+			@PathVariable("userID") String userID) {
+		userManager.deleteUser(userID);
 	}
 	
 	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.DELETE)

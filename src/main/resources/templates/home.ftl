@@ -28,17 +28,19 @@
                 <tr>
                     <td>ID</td>
                     <td>Name</td> 
-                    <td>Major</td> 
-                    <td>Creation Time</td>
+                    <td>Username</td> 
+                    <td>Password</td>
+                    <td>Phone</td>
                     <td>Delete</td>
                 </tr>
                 <#list users as user>
                         <tr>
-                            <td>${user.id}</td>
+                            <td>${user.userID}</td>
                             <td>${user.name}</td>
-                            <td>${user.major}</td>
-                            <td>${user.creationTime}</td>
-                            <td><button onclick="deleteUser('${user.id}')">Delete</button></td>
+                            <td>${user.username}</td>
+                            <td>${user.password}</td>
+                            <td>${user.phone}</td>
+                            <td><button onclick="deleteUser('${user.userID}')">Delete</button></td>
                         </tr>
                 </#list>
             </table>
@@ -52,13 +54,17 @@
                 <tr>
                     <td>ID</td>
                     <td>Name</td> 
-                    <td>Major</td>                     
+                    <td>Username</td>
+                    <td>Password</td>
+                    <td>Phone</td>                     
                     <td>Add</td>
                 </tr>                
                 <tr>
-                    <td><input type="text" id="input_id"></td>
+                    <td><input type="text" id="input_userID"></td>
                     <td><input type="text" id="input_name"></td>
-                    <td><input type="text" id="input_major"></td>                    
+                    <td><input type="text" id="input_username"></td>
+                    <td><input type="text" id="input_password"></td>
+                    <td><input type="text" id="input_phone"></td>                    
                     <td><button onclick="addUser()">Add</button></td>
                 </tr>
             </table>
@@ -73,12 +79,16 @@
                 <tr>
                     <td>ID</td>
                     <td>Name</td>
-                    <td>Major</td>
+                    <td>Username</td>
+                    <td>Password</td>
+                    <td>Phone</td>
                 </tr>
                 <tr>
-                    <td><label id="result_id"></td>
+                    <td><label id="result_userID"></td>
                     <td><label id="result_name"></td>
-                    <td><label id="result_major"></td>
+                    <td><label id="result_username"></td>
+                    <td><label id="result_password"></td>
+                    <td><label id="result_phone"></td>
                 </tr>
             </table>
         </div>

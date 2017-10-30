@@ -69,22 +69,22 @@ public class FSUserManager implements UserManager {
 	}
 
 	@Override
-	public User getUser(String userId) {
+	public User getUser(String userID) {
 		UserMap userMap = getUserMap();
-		return userMap.get(userId);
+		return userMap.get(userID);
 	}
 
 	@Override
 	public void updateUser(User user) {
 		UserMap userMap = getUserMap();
-		userMap.put(user.getId(), user);
+		userMap.put(user.getUserID(), user);
 		persistUserMap(userMap);
 	}
 
 	@Override
-	public void deleteUser(String userId) {
+	public void deleteUser(String userID) {
 		UserMap userMap = getUserMap();
-		userMap.remove(userId);
+		userMap.remove(userID);
 		persistUserMap(userMap);
 	}
 

@@ -35,18 +35,22 @@ function deleteUser(userId) {
 
 function addUser() {
 
-	var userId = $('#input_id').val();
+	var userID = $('#input_userID').val();
 	var userName = $('#input_name').val();
-	var userMajor = $('#input_major').val();
+	var userUserName = $('#input_username').val();
+	var userPassword = $('#input_password').val();
+	var userPhone = $('#input_phone').val();
 
-	if (userId) {
+	if (userID) {
 		$.ajax(
 				{
 					type : "POST",
-					url  : "/cs480/user/" + userId,
+					url  : "/cs480/user/" + userID,
 					data : {
 						"name" : userName,
-						"major" : userMajor
+						"username" : userUserName,
+						"password" : userPassword,
+						"phone" : userPhone
 					},
 					success : function(result) {
 						location.reload();
@@ -60,19 +64,21 @@ function addUser() {
 	}
 }
 
-function getUser(userId) {
-	var userId = $('#query_id').val();
-	if (userId) {
+function getUser(userID) {
+	var userID = $('#query_id').val();
+	if (userID) {
 		$.ajax(
 				{
 					type : "GET",
-					url  : "/cs480/user/" + userId,
+					url  : "/cs480/user/" + userID,
 					data : {
 					},
 					success : function(result) {
-						$('#result_id').text(result.id);
+						$('#result_userID').text(result.userID);
 						$('#result_name').text(result.name);
-						$('#result_major').text(result.major);
+						$('#result_username').text(result.username);
+						$('#result_password').text(result.password);
+						$('#result_phone').text(result.phone);
 					},
 					error: function (jqXHR, exception) {
 						alert("Failed to get the user.");

@@ -33,7 +33,7 @@ cs480App.controller('Ctrl', function ($scope, $http) {
   }
 
   $scope.addUser = function() {
-	  $http.post("cs480/user/" + $scope.new_id + "?name=" + $scope.new_name + "&major=" + $scope.new_major)
+	  $http.post("cs480/user/" + $scope.new_userID + "?name=" + $scope.new_name + "&username=" + $scope.new_username + "&password=" + $scope.new_password + "&phone=" + $scope.new_phone)
 	  	.success(function(data){
 	  		$scope.loadUsers();
 	  	});

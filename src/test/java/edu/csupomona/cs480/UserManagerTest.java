@@ -13,7 +13,7 @@ public class UserManagerTest {
 	public void getUserTest() {
 		UserManager usermanager = new FSUserManager();
 		User user = new User();
-		user.setId("010294782");
+		user.setUserID("010294782");
 		user.setName("Matthew Kim");
 		user.setUsername("KARDBM");
 		user.setPassword("king");
@@ -27,7 +27,7 @@ public class UserManagerTest {
 	public void updateUserTest() {
 		UserManager usermanager = new FSUserManager();
 		User user = new User();
-		user.setId("010551438");
+		user.setUserID("010551438");
 		user.setName("John Doe");
 		user.setUsername("j0hnd0e");
 		user.setPassword("alsdfbaekf");
@@ -41,15 +41,15 @@ public class UserManagerTest {
 	public void deleteUserTest() {
 		UserManager usermanager = new FSUserManager();
 		User user = new User();
-		user.setId("010350834");
+		user.setUserID("010350834");
 		user.setName("Mary Kate");
 		user.setUsername("mknoashley");
 		user.setPassword("twin1");
 		user.setPhone("123-456-7890");
 		usermanager.updateUser(user);
-		usermanager.deleteUser(user.getId());
+		usermanager.deleteUser(user.getUserID());
 		
-		assertNull(usermanager.getUser(user.getId()));
+		assertNull(usermanager.getUser(user.getUserID()));
 	}
 
 }

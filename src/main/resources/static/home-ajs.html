@@ -27,16 +27,18 @@
 	                <tr>
 	                    <td>ID</td>
 	                    <td>Name</td>
-	                    <td>Major</td>
-	                    <td>Creation Time</td>
+	                    <td>Username</td>
+						<td>Password</td>
+						<td>Phone</td>
 	                    <td>Delete</td>
 	                </tr>
 
 	                <tr ng-repeat="user in users">
 	                    <td>{{user.id}}</td>
 	                    <td>{{user.name}}</td>
-	                    <td>{{user.major}}</td>
-	                    <td>{{user.creationTime}}</td>
+	                    <td>{{user.username}}</td>
+						<td>{{user.password}}</td>
+						<td>{{user.phone}}</td>
                         <td><button ng-click="deleteUser(user.id)">Delete</button></td>
 	                </tr>
 	            </table>
@@ -50,13 +52,17 @@
 	                <tr>
 	                    <td>ID</td>
 	                    <td>Name</td>
-	                    <td>Major</td>
+						<td>Username</td>
+						<td>Password</td>
+						<td>Phone</td>
 	                    <td>Add</td>
 	                </tr>
 	                <tr>
-	                    <td><input type="text" ng-model="new_id"></td>
+	                    <td><input type="text" ng-model="new_userID"></td>
 	                    <td><input type="text" ng-model="new_name"></td>
-	                    <td><input type="text" ng-model="new_major"></td>
+						<td><input type="text" ng-model="new_username"></td>
+						<td><input type="text" ng-model="new_password"></td>
+						<td><input type="text" ng-model="new_phone"></td>
 	                    <td><button ng-click="addUser()">Add</button></td>
 	                </tr>
 	            </table>
@@ -71,12 +77,16 @@
 	                <tr>
 	                    <td>ID</td>
 	                    <td>Name</td>
-	                    <td>Major</td>
+						<td>Username</td>
+						<td>Password</td>
+						<td>Phone</td>
 	                </tr>
 	                <tr>
-	                    <td><label>{{founduser.id}}</label></td>
+	                    <td><label>{{founduser.userID}}</label></td>
 	                    <td><label>{{founduser.name}}</label></td>
-	                    <td><label>{{founduser.major}}</label></td>
+						<td><label>{{founduser.username}}</label></td>
+						<td><label>{{founduser.password}}</label></td>
+						<td><label>{{founduser.phone}}</label></td>
 	                </tr>
 	            </table>
 	        </div>
