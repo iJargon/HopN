@@ -240,8 +240,14 @@ public class WebController {
 	ModelAndView getHomepage() {
 		ModelAndView modelAndView = new ModelAndView("home");
 		modelAndView.addObject("users", listAllUsers());
-		modelAndView.addObject("events", listAllEvents());
 		return modelAndView;
+	}
+	
+	@RequestMapping(value = "/cs480/events", method = RequestMethod.GET)
+	ModelAndView getEventspage() {
+		ModelAndView modelAndViewEvents = new ModelAndView("events");
+		modelAndViewEvents.addObject("events", listAllEvents());
+		return modelAndViewEvents;
 	}
 
 }
