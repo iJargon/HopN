@@ -1,14 +1,15 @@
 <html>
 
 <head>
-    <title>CPP HopN Events Page</title>
+    <title>CPP HopN Users Page</title>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>    
-    <script src="/js/event-control.js"></script>
+    <script src="/js/user-control.js"></script>
     <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
 
 <body>    
-    <div id="header" class="cf">
+
+<div id="header" class="cf">
   <div id="logo">
     <a href="home"><img src="http://gyazo.com/fb513813a699740c7cd2dbcac7cbcafd.png"><span class="by">by</span> <img src="http://i40.tinypic.com/o7n2xg.jpg" height="25"></a>
   </div>
@@ -22,65 +23,78 @@
   </div>
 </div>
 <div id="splashBar">
-  <h1>Current Events Available</h1>
-  <h2>[insert pun or something here idk]</h2>
+  <h1>Users Page</h1>
+  <h2>[merps]</h2>
+  <form id="getStarted">
+    <input type="text" class="splashBox" value="Enter Email">
+    <input type="text" class="splashBox" value="Enter Name">
+    I am a:
+    <select>
+      <option>Driver</option>
+      <option>Passenger</option>
+    </select>
+    <input type="submit" value="Get Started" class="submitButton">
+  </form>
 </div>
+<div></div>
 <div id="columnRight">
 
 </div>
 <div id="howItWorks">
-  <h3>Event List</h3>
+  <h3>User List</h3>
   <div class="underBar"></div>
   <div id="steps">
     <div>
+        <div>
             <table border="1">            
                 <tr>
                     <td>ID</td>
                     <td>Name</td> 
-                    <td>Location</td> 
-                    <td>Date</td>
-                    <td>Start Time</td>
-                    <td>End Time</td>
+                    <td>Username</td> 
+                    <td>Password</td>
+                    <td>Phone</td>
                     <td>Delete</td>
                 </tr>
-                <#list events as event>
+                <#list users as user>
                         <tr>
-                            <td>${event.eventID}</td>
-                            <td>${event.name}</td>
-                            <td>${event.location}</td>
-                            <td>${event.date}</td>
-                            <td>${event.start_time}</td>
-                            <td>${event.end_time}</td>
-                            <td><button onclick="deleteEvent('${event.eventID}')">Delete</button></td>
+                            <td>${user.userID}</td>
+                            <td>${user.name}</td>
+                            <td>${user.username}</td>
+                            <td>${user.password}</td>
+                            <td>${user.phone}</td>
+                            <td><button onclick="deleteUser('${user.userID}')">Delete</button></td>
                         </tr>
                 </#list>
             </table>
+        </div>
   </div>
 </div>
   <div id="testimonials">
-    <h3>Add Event</h3>  
-  <div class="underBar"></div>
+    <h3>Add User</h3>
+    <div class="underBar"></div>
     
     <div id="columnLeft">
       <div class="row cf">
+      <div class="icon">
+          <img src="http://gyazo.com/3a986abda46bbe7bf0d2f5411e40ee5b.png">
+        </div>
         <div>
             <table border="1">
                 <tr>
-                    <td>Event ID</td>
+                    <td>ID</td>
                     <td>Name</td> 
-                    <td>Location</td>                     
-                    <td>Date</td>
-                    <td>Start Time</td>
-                    <td>End Time</td>
+                    <td>Username</td>
+                    <td>Password</td>
+                    <td>Phone</td>                     
+                    <td>Add</td>
                 </tr>                
                 <tr>
-                    <td><input type="text" id="input_eventID"></td>
-                    <td><input type="text" id="input_event_name"></td>
-                    <td><input type="text" id="input_event_location"></td>
-                    <td><input type="text" id="input_event_date"></td> 
-                    <td><input type="text" id="input_event_start_time"></td> 
-                    <td><input type="text" id="input_event_end_time"></td>                     
-                    <td><button onclick="addEvent()">Add</button></td>
+                    <td><input type="text" id="input_userID"></td>
+                    <td><input type="text" id="input_name"></td>
+                    <td><input type="text" id="input_username"></td>
+                    <td><input type="text" id="input_password"></td>
+                    <td><input type="text" id="input_phone"></td>                    
+                    <td><button onclick="addUser()">Add</button></td>
                 </tr>
             </table>
         </div>
@@ -96,33 +110,36 @@
        
       </div>
       <div class="row cf">
-        
-        
+        <div class="icon">
+          <img src="http://gyazo.com/090b67262dd5a390ddaf1d81134e54ec.png">
+        </div>
+        <div class="details">
+          <h5>Online Marketing</h5>
+          <p>Vivamus sit amet adipiscing sem. Ut commodo felis urna, at hendrerit lorem adipiscing id. Duis tempor suscipit nibh, ut porta risus.</p>
+        </div>
       </div>
     </div>
     </div>
   </div>
 <div id="whatWeAnalyze">
-  <h3>Query Event</h3>
+  <h3>Query User</h3>
     <div class="underBar"></div>
   <div class="testimonialQuote">
-            <input type="text" id="query_eventID"><button onclick="getEvent()">Get</button>
+    <input type="text" id="query_id"><button onclick="getUser()">Get</button>
             <table border="1">
                 <tr>
-                    <td>Event ID</td>
+                    <td>ID</td>
                     <td>Name</td>
-                    <td>Location</td>
-                    <td>Date</td>
-                    <td>Start Time</td>
-                    <td>End Time</td>
+                    <td>Username</td>
+                    <td>Password</td>
+                    <td>Phone</td>
                 </tr>
                 <tr>
-                    <td><label id="result_eventID"></td>
-                    <td><label id="result_event_name"></td>
-                    <td><label id="result_location"></td>
-                    <td><label id="result_date"></td>
-                    <td><label id="result_start_time"></td>
-                    <td><label id="result_end_time"></td>
+                    <td><label id="result_userID"></td>
+                    <td><label id="result_name"></td>
+                    <td><label id="result_username"></td>
+                    <td><label id="result_password"></td>
+                    <td><label id="result_phone"></td>
                 </tr>
             </table>
             </div>
@@ -162,10 +179,7 @@
     &copy; 2017 HopN Web Service. All Rights Reserved.
   </div>
 </div>
-    </div>    
-
     </div>
-    
     
 </body>
 

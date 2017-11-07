@@ -1,0 +1,472 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+/* https://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#header {
+  width: 1140px;
+  margin: 12px auto;
+}
+
+#logo {
+  float: left;
+  margin-top: 19px;
+  font-size: 13px;
+}
+
+.by {
+  display: inline-block;
+  margin-left: 6px;
+  margin-right: 3px;
+}
+
+#logo img {
+  vertical-align: middle;
+}
+
+#menu {
+  float: right;
+}
+
+#menu ul {
+  list-style-type: none;
+}
+
+#menu ul li {
+  float: right;
+  margin-top: 18px;
+}
+
+.button {
+  padding: 8px 16px 8px 16px;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signup {
+  background-color: #359DDE;
+  border-bottom: 2px solid #0F79BA;
+}
+
+.login {
+  background-color: #D9750B;
+  border-bottom: 2px solid #B55E00;  
+}
+
+.menuLink a {
+  color: #999;
+  font-size: 14px;
+  margin-left: 42px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.menuLink a:hover {
+  color: black;
+  font-weight: 400;
+}
+
+.lastLink {
+  margin-right: 24px;
+}
+
+#splashBar {
+  background-image: url('https://i.imgur.com/r3g6rZF.png');
+  background-size: cover;
+  display: block;
+  text-align: center;
+  color: white;
+  padding-bottom: 200px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 400;
+  padding: 75px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+  padding: 7px 0px 15px 0px;
+}
+
+#getStarted {
+  background-color: rgba(255,255,255,.2);
+  display: inline-block;
+  padding: 0px 0px 0px 40px;
+  margin-top: 10px;
+}
+
+.splashBox {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+#getStarted select {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.submitButton {
+  background-color: #359DDE;
+  border: 0;
+  width: 150px;
+  height: 60px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#statsBar {
+  width: 1140px;
+  background: white;
+  height: 145px;
+  margin: -115px auto;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+#statsBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#statsBar ul li {
+  float: left;
+  width: 24.85%;
+  text-align: center;
+  height: 145px;
+  border-left: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+#statsBar ul li:first-of-type {
+  border-left: none;
+}
+
+.statNumber {
+  font-weight: 700;
+  font-size: 24px;
+  display: block;
+  margin-top: 52px;
+  color: black;
+}
+
+#statsBar ul li p {
+  margin: 0;
+  padding: 0;
+  color: #888;
+  font-size: 15px;
+}
+
+#howItWorks {
+  padding-bottom: 75px;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+h3 {
+  color: #888;
+  display: inline-block;
+  overflow: visible;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Opens Sans', sans-serif;
+}
+
+.underBar {
+  height: 3px;
+  width: 106px;
+  background-color: #ddd;
+  display: block;
+  margin: 5px auto;
+}
+
+#steps {
+  width: 820px;
+  border-top: 1px solid #ddd;
+  margin: 50px auto;
+}
+
+#steps ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+#steps ul li {
+  display: block;
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: white;
+  margin-top: -25px;
+  color: #bbb;
+  font-size: 28px;
+  font-weight: 700;
+  padding-top: 10px;
+  vertical-align: center;
+}
+
+.step {
+  display: inline-block;
+  width: 280px;
+  min-height: 100px;
+  text-align: center;
+  vertical-align: top;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #555;
+  letter-spacing: .3px;
+}
+
+.step p {
+  margin-top: 10px;
+  color: #c0c4ce;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600 !important;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#testimonials {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding-top: 30px;
+}
+
+#columnLeft {
+  width: 400px;
+  display: inline-block;
+  margin: 62px 15px 0px 0px;
+  min-height: 50px;
+}
+
+#columnRight {
+  width: 400px;
+  display: inline-block;
+  margin: 62px 0px 0px 15px;
+  min-height: 50px;
+}
+
+#testimonials .row {
+  display: block;
+}
+
+#testimonials .icon {
+  width:60px;
+    min-height: 60px;
+  float: left;
+  text-align: center;
+}
+
+#testimonials .details {
+  float: left;
+  width: 329px;
+  min-height: 80px;
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 40px;
+}
+
+h5 {
+  font-size: 18px;
+  color: #444;
+  font-weight: 700;
+}
+
+#testimonials .details p {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 20px;
+}
+
+#map {
+  background-color: #eee;
+  display: block;
+  min-height: 200px;
+}
+
+#map .container {
+  width: 1140px;
+  margin: 0px auto;
+  padding-top: 40px;
+  text-align: center;
+  padding-bottom: 55px;
+}
+
+#map .container .contcol {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contcol ul {
+  display: block;
+  margin-top: 10px;
+}
+
+.contcol ul li {
+  font-size: 13px;
+  display: block;
+  padding-top: 12px;
+}
+
+.contcol ul li a {
+  color: #666;
+  text-decoration: none;
+}
+
+.contcol ul li a:hover {
+  color: #359DDE;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.copy {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#whatWeAnalyze {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.testimonialQuote {
+  width: 768px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #359DDE;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 24px;
+  line-height: 27px;
+}
+
+.littleUnderBar {
+  height: 2px;
+  width: 60px;
+  background-color: #ddd;
+  display: block;
+  margin: 25px auto;
+}
+
+.testimonialName {
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.testimonialTitle {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 400;
+}s

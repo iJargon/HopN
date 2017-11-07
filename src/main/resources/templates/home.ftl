@@ -1,101 +1,81 @@
 <html>
 
 <head>
-    <title>CS480 Demo Web Service</title>
+    <title>CPP HopN Web Service</title>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>    
     <script src="/js/home-control.js"></script>
+    <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
 
 <body>    
-    
-    <div>
-    		GOD I HOPE THIS WORKS!
-        This is a simple page to demonstrate the web UI development. 
-        The key tools and techniques used include:
-        <ul>
-            <li>HTML - Obviously</li>
-            <li><a href="http://freemarker.org/">FreeMarker</a></li>
-            <li><a href="http://jquery.com/">JQuery</a></li>
-            <li><a href="http://api.jquery.com/jquery.ajax/">JQuery - AJAX</a></li>
-        </ul>
+
+<div id="header" class="cf">
+  <div id="logo">
+    <a href="home"><img src="http://gyazo.com/fb513813a699740c7cd2dbcac7cbcafd.png"><span class="by">by</span> <img src="http://i40.tinypic.com/o7n2xg.jpg" height="25"></a>
+  </div>
+  <div id="menu">
+    <ul>
+      <li class="button signup"><a href="login">Sign Up</a></li>
+      <li class="button login"><a href="login">Login</a></li>
+      <li class="lastLink menuLink"><a href="#">About</a></li>
+      <li class="menuLink"><a href="events">Look for Events</a></li>
+      <li class="menuLink"><a href="home">Home</a></li>
+  </div>
+</div>
+<div id="splashBar">
+  <h1>Carpool / Rideshare system within the CPP community for events around Socal.</h1>
+  <h2>With CPP HopN, you can... GOD I HOPE THIS WORKS!</h2>
+</div>
+<div id="statsBar">
+  <ul>
+    <li><p><span class="statNumber">13</span></p>
+      <p>Current Events</p></li>
+    <li><p><span class="statNumber">1,000</span></p>
+      <p>Users</p></li>
+    <li><p><span class="statNumber">~ ~ ~</span></p>
+      <p>blah</p></li>
+    <li><p><span class="statNumber">~ ~ ~</span></p>
+      <p>merps</p></li>
+  </ul>
+</div>
     </div>
-
-    <hr>
-
-    <div>
-        <div>
-            <label>User List</label>
-            <table border="1">            
-                <tr>
-                    <td>ID</td>
-                    <td>Name</td> 
-                    <td>Username</td> 
-                    <td>Password</td>
-                    <td>Phone</td>
-                    <td>Delete</td>
-                </tr>
-                <#list users as user>
-                        <tr>
-                            <td>${user.userID}</td>
-                            <td>${user.name}</td>
-                            <td>${user.username}</td>
-                            <td>${user.password}</td>
-                            <td>${user.phone}</td>
-                            <td><button onclick="deleteUser('${user.userID}')">Delete</button></td>
-                        </tr>
-                </#list>
-            </table>
-        </div>
-        
-        <hr>
-        
-        <div>
-            <label>Add User</label>
-            <table border="1">
-                <tr>
-                    <td>ID</td>
-                    <td>Name</td> 
-                    <td>Username</td>
-                    <td>Password</td>
-                    <td>Phone</td>                     
-                    <td>Add</td>
-                </tr>                
-                <tr>
-                    <td><input type="text" id="input_userID"></td>
-                    <td><input type="text" id="input_name"></td>
-                    <td><input type="text" id="input_username"></td>
-                    <td><input type="text" id="input_password"></td>
-                    <td><input type="text" id="input_phone"></td>                    
-                    <td><button onclick="addUser()">Add</button></td>
-                </tr>
-            </table>
-        </div>
-
-        <hr>
-
-        <div>
-            <label>Query User</label>
-            <input type="text" id="query_id"><button onclick="getUser()">Get</button>
-            <table border="1">
-                <tr>
-                    <td>ID</td>
-                    <td>Name</td>
-                    <td>Username</td>
-                    <td>Password</td>
-                    <td>Phone</td>
-                </tr>
-                <tr>
-                    <td><label id="result_userID"></td>
-                    <td><label id="result_name"></td>
-                    <td><label id="result_username"></td>
-                    <td><label id="result_password"></td>
-                    <td><label id="result_phone"></td>
-                </tr>
-            </table>
-        </div>
+  </div>
+<div id="map">
+  <div class="container cf">
+    <div class="contcol">
+      <h6>Herp</h6>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">Login to your account</a></li>
+        <li><a href="#">Plans & Pricing</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
     </div>
-    
-    <hr>
+    <div class="contcol">
+      <h6>Creators</h6>
+      <ul>
+        <li><a href="#">John Canalita</a></li>
+        <li><a href="#">Nandita Chauhan</a></li>
+        <li><a href="#">Gretchen Lai</a></li>
+        <li><a href="#">Nicole Lee</a></li>
+      </ul>
+    </div>
+    <div class="contcol">
+      <h6>Derp</h6>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Brands</a></li>
+        <li><a href="#">Investors</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copy">
+    &copy; 2017 HopN Web Service. All Rights Reserved.
+  </div>
+</div>
+    </div>
     
 </body>
 

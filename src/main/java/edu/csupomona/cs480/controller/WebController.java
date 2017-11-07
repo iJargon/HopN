@@ -88,7 +88,7 @@ public class WebController {
 	 * Try it in your web browser:
 	 * 	http://localhost:8080/cs480/user/user101
 	 */
-	@RequestMapping(value = "/cs480/user/{userID}", method = RequestMethod.GET)
+	@RequestMapping(value = "/cs480/users/{userID}", method = RequestMethod.GET)
 	User getUser(@PathVariable("userID") String userID) {
 		User user = userManager.getUser(userID);
 		return user;
@@ -98,6 +98,12 @@ public class WebController {
 	Event getEvent(@PathVariable("eventID") String eventID) {
 		Event event = eventManager.getEvent(eventID);
 		return event;
+	}
+	
+	@RequestMapping(value = "/cs480/login/{userID}", method = RequestMethod.GET)
+	User getUserLogin(@PathVariable("userID") String userID) {
+		User user = userManager.getUser(userID);
+		return user;
 	}
 
 	/**
@@ -120,7 +126,7 @@ public class WebController {
 	 * @param phone
 	 * @return
 	 */
-	@RequestMapping(value = "/cs480/user/{userID}", method = RequestMethod.POST)
+	@RequestMapping(value = "/cs480/users/{userID}", method = RequestMethod.POST)
 	User updateUser(
 			@PathVariable("userID") String id,
 			@RequestParam("name") String name,
@@ -154,6 +160,23 @@ public class WebController {
 		event.setEnd_time(end);
 		eventManager.updateEvent(event);
 		return event;
+	}
+	
+	@RequestMapping(value = "/cs480/login/{userID}", method = RequestMethod.POST)
+	User updateUserLogin(
+			@PathVariable("userID") String id,
+			@RequestParam("name") String name,
+			@RequestParam("username") String username,
+			@RequestParam("password") String password,
+			@RequestParam("phone") String phone) {
+		User user = new User();
+		user.setUserID(id);
+		user.setName(name);
+		user.setUsername(username);
+		user.setPassword(password);
+		user.setPhone(phone);
+		userManager.updateUser(user);
+		return user;
 	}
 	
 /*	@RequestMapping(value = "/cs480/john", method = RequestMethod.GET)
@@ -203,7 +226,7 @@ public class WebController {
 	 *
 	 * @param userId
 	 */
-	@RequestMapping(value = "/cs480/user/{userID}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/cs480/users/{userID}", method = RequestMethod.DELETE)
 	void deleteUser(
 			@PathVariable("userID") String userID) {
 		userManager.deleteUser(userID);
@@ -213,6 +236,12 @@ public class WebController {
 	void deleteEvent(
 			@PathVariable("eventID") String eventID) {
 		eventManager.deleteEvent(eventID);
+	}
+	
+	@RequestMapping(value = "/cs480/login/{userID}", method = RequestMethod.DELETE)
+	void deleteUserLogin(
+			@PathVariable("userID") String userID) {
+		userManager.deleteUser(userID);
 	}
 
 	/**
@@ -229,6 +258,11 @@ public class WebController {
 	List<Event> listAllEvents() {
 		return eventManager.listAllEvents();
 	}
+	
+	@RequestMapping(value = "/cs480/login/list", method = RequestMethod.GET)
+	List<User> listAllUsersLogin() {
+		return userManager.listAllUsers();
+	}
 
 	
 	/*********** Web UI Test Utility **********/
@@ -243,11 +277,25 @@ public class WebController {
 		return modelAndView;
 	}
 	
+	@RequestMapping(value = "/cs480/users", method = RequestMethod.GET)
+	ModelAndView getUserspage() {
+		ModelAndView modelAndView = new ModelAndView("users");
+		modelAndView.addObject("users", listAllUsers());
+		return modelAndView;
+	}
+	
 	@RequestMapping(value = "/cs480/events", method = RequestMethod.GET)
 	ModelAndView getEventspage() {
 		ModelAndView modelAndViewEvents = new ModelAndView("events");
 		modelAndViewEvents.addObject("events", listAllEvents());
 		return modelAndViewEvents;
+	}
+	
+	@RequestMapping(value = "/cs480/login", method = RequestMethod.GET)
+	ModelAndView getLoginpage() {
+		ModelAndView modelAndViewLogin = new ModelAndView("login");
+		modelAndViewLogin.addObject("users", listAllUsersLogin());
+		return modelAndViewLogin;
 	}
 
 }
