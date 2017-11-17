@@ -1,5 +1,7 @@
 package edu.csupomona.cs480.data;
 
+import java.util.ArrayList;
+
 /*
  * 	Event object
  */
@@ -10,7 +12,22 @@ public class Event {
 	private String date;
 	private String start_time;
 	private String end_time;
+	private ArrayList<Driver> drivers;
 
+	public void addDriver(User u, int x ) {
+		Driver d = new Driver(u, x);
+		drivers.add(d);
+	}
+	
+	public Driver getDriver(User u) {
+		for (Driver driver: drivers) {
+			if (u.getUserID() == driver.getDriver().getUserID()) {
+				return driver;
+			}
+		}
+		return null;
+	}
+	
 	public String getName() {
 		return name;
 	}
