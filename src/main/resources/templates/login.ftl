@@ -37,7 +37,7 @@
         <div>
             <table border="1">            
                 <tr>
-                    <td>ID</td>
+                    <td>Username</td>
                     <td>Name</td> 
                     <td>Password</td>
                     <td>Phone</td>
@@ -68,7 +68,7 @@
         <div>
             <table border="1">
                 <tr>
-                    <td>ID</td>
+                    <td>Username</td>
                     <td>Name</td> 
                     <td>Password</td>
                     <td>Phone</td>                     
