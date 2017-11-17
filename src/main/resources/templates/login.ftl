@@ -37,9 +37,8 @@
         <div>
             <table border="1">            
                 <tr>
-                    <td>Username</td>
-                    <td>Password</td> 
-                    <td>Username</td> 
+                    <td>ID</td>
+                    <td>Name</td> 
                     <td>Password</td>
                     <td>Phone</td>
                     <td>Delete</td>
@@ -48,7 +47,6 @@
                         <tr>
                             <td>${user.userID}</td>
                             <td>${user.name}</td>
-                            <td>${user.username}</td>
                             <td>${user.password}</td>
                             <td>${user.phone}</td>
                             <td><button onclick="deleteUserLogin('${user.userID}')">Delete</button></td>
@@ -72,7 +70,6 @@
                 <tr>
                     <td>ID</td>
                     <td>Name</td> 
-                    <td>Username</td>
                     <td>Password</td>
                     <td>Phone</td>                     
                     <td>Add</td>
@@ -80,7 +77,6 @@
                 <tr>
                     <td><input type="text" id="input_userID"></td>
                     <td><input type="text" id="input_name"></td>
-                    <td><input type="text" id="input_username"></td>
                     <td><input type="text" id="input_password"></td>
                     <td><input type="text" id="input_phone"></td>                    
                     <td><button onclick="addUserLogin()">Add</button></td>
@@ -89,9 +85,6 @@
         </div>
       </div>
     </div>
-    <div id="columnRight">
-       
-      </div>
      
     </div>
     </div>

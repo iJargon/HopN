@@ -20,7 +20,6 @@ function addUserLogin() {
 
 	var userID = $('#input_userID').val();
 	var userName = $('#input_name').val();
-	var userUserName = $('#input_username').val();
 	var userPassword = $('#input_password').val();
 	var userPhone = $('#input_phone').val();
 
@@ -31,7 +30,6 @@ function addUserLogin() {
 					url  : "/cs480/login/" + userID,
 					data : {
 						"name" : userName,
-						"username" : userUserName,
 						"password" : userPassword,
 						"phone" : userPhone
 					},

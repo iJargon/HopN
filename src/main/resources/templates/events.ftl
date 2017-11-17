@@ -92,9 +92,7 @@
         
       </div>
     </div>
-    <div id="columnRight">
-       
-      </div>
+
       <div class="row cf">
         
         

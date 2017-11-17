@@ -21,7 +21,7 @@ function deleteUser(userId) {
 	$.ajax(
 			{
 				type : "DELETE",
-				url  : "/cs480/user/" + userId,
+				url  : "/cs480/users/" + userId,
 				data : {
 				},
 				success : function(result) {
@@ -37,7 +37,6 @@ function addUser() {
 
 	var userID = $('#input_userID').val();
 	var userName = $('#input_name').val();
-	var userUserName = $('#input_username').val();
 	var userPassword = $('#input_password').val();
 	var userPhone = $('#input_phone').val();
 
@@ -45,10 +44,9 @@ function addUser() {
 		$.ajax(
 				{
 					type : "POST",
-					url  : "/cs480/user/" + userID,
+					url  : "/cs480/users/" + userID,
 					data : {
 						"name" : userName,
-						"username" : userUserName,
 						"password" : userPassword,
 						"phone" : userPhone
 					},
@@ -70,13 +68,12 @@ function getUser(userID) {
 		$.ajax(
 				{
 					type : "GET",
-					url  : "/cs480/user/" + userID,
+					url  : "/cs480/users/" + userID,
 					data : {
 					},
 					success : function(result) {
 						$('#result_userID').text(result.userID);
 						$('#result_name').text(result.name);
-						$('#result_username').text(result.username);
 						$('#result_password').text(result.password);
 						$('#result_phone').text(result.phone);
 					},

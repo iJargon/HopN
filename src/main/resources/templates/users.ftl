@@ -50,7 +50,6 @@
                 <tr>
                     <td>ID</td>
                     <td>Name</td> 
-                    <td>Username</td> 
                     <td>Password</td>
                     <td>Phone</td>
                     <td>Delete</td>
@@ -59,7 +58,6 @@
                         <tr>
                             <td>${user.userID}</td>
                             <td>${user.name}</td>
-                            <td>${user.username}</td>
                             <td>${user.password}</td>
                             <td>${user.phone}</td>
                             <td><button onclick="deleteUser('${user.userID}')">Delete</button></td>
@@ -83,7 +81,6 @@
                 <tr>
                     <td>ID</td>
                     <td>Name</td> 
-                    <td>Username</td>
                     <td>Password</td>
                     <td>Phone</td>                     
                     <td>Add</td>
@@ -91,7 +88,6 @@
                 <tr>
                     <td><input type="text" id="input_userID"></td>
                     <td><input type="text" id="input_name"></td>
-                    <td><input type="text" id="input_username"></td>
                     <td><input type="text" id="input_password"></td>
                     <td><input type="text" id="input_phone"></td>                    
                     <td><button onclick="addUser()">Add</button></td>
@@ -106,9 +102,6 @@
         
       </div>
     </div>
-    <div id="columnRight">
-       
-      </div>
       <div class="row cf">
         <div class="icon">
           <img src="http://gyazo.com/090b67262dd5a390ddaf1d81134e54ec.png">
@@ -130,14 +123,12 @@
                 <tr>
                     <td>ID</td>
                     <td>Name</td>
-                    <td>Username</td>
                     <td>Password</td>
                     <td>Phone</td>
                 </tr>
                 <tr>
                     <td><label id="result_userID"></td>
                     <td><label id="result_name"></td>
-                    <td><label id="result_username"></td>
                     <td><label id="result_password"></td>
                     <td><label id="result_phone"></td>
                 </tr>

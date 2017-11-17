@@ -121,7 +121,6 @@ public class WebController {
 	 *
 	 * @param id
 	 * @param name
-	 * @param username
 	 * @param password
 	 * @param phone
 	 * @return
@@ -130,13 +129,11 @@ public class WebController {
 	User updateUser(
 			@PathVariable("userID") String id,
 			@RequestParam("name") String name,
-			@RequestParam("username") String username,
 			@RequestParam("password") String password,
 			@RequestParam("phone") String phone) {
 		User user = new User();
 		user.setUserID(id);
 		user.setName(name);
-		user.setUsername(username);
 		user.setPassword(password);
 		user.setPhone(phone);
 		userManager.updateUser(user);
@@ -166,13 +163,11 @@ public class WebController {
 	User updateUserLogin(
 			@PathVariable("userID") String id,
 			@RequestParam("name") String name,
-			@RequestParam("username") String username,
 			@RequestParam("password") String password,
 			@RequestParam("phone") String phone) {
 		User user = new User();
 		user.setUserID(id);
 		user.setName(name);
-		user.setUsername(username);
 		user.setPassword(password);
 		user.setPhone(phone);
 		userManager.updateUser(user);
