@@ -34,27 +34,6 @@
   <div class="underBar"></div>
   <div id="steps">
     <div>
-        <div>
-            <table border="1">            
-                <tr>
-                    <td>Username</td>
-                    <td>Name</td> 
-                    <td>Password</td>
-                    <td>Phone</td>
-                    <td>Delete</td>
-                </tr>
-                <#list users as user>
-                        <tr>
-                            <td>${user.userID}</td>
-                            <td>${user.name}</td>
-                            <td>${user.password}</td>
-                            <td>${user.phone}</td>
-                            <td><button onclick="deleteUserLogin('${user.userID}')">Delete</button></td>
-                        </tr>
-                </#list>
-            </table>
-        </div>
-        
       <div id="columnLeft">
       <div class="row cf">
       <div class="icon">

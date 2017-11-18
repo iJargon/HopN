@@ -86,7 +86,7 @@ public class WebController {
 	 * automatically converted to JSON format.
 	 * <p>
 	 * Try it in your web browser:
-	 * 	http://localhost:8080/cs480/user/user101
+	 * 	http://localhost:8080/cs480/users/user101
 	 */
 	@RequestMapping(value = "/cs480/users/{userID}", method = RequestMethod.GET)
 	User getUser(@PathVariable("userID") String userID) {

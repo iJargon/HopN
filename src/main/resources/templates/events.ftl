@@ -29,7 +29,7 @@
 
 </div>
 <div id="howItWorks">
-  <h3>Event List</h3>
+  <h3>Events List</h3>
   <div class="underBar"></div>
   <div id="steps">
     <div>
@@ -76,7 +76,7 @@
   </div>
 </div>
   <div id="testimonials">
-    <h3>Add Event</h3>  
+    <h3>Create an Event</h3>  
   <div class="underBar"></div>
     
     <div id="columnLeft">
@@ -119,7 +119,7 @@
     </div>
   </div>
 <div id="whatWeAnalyze">
-  <h3>Query Event</h3>
+  <h3>Search for an Event</h3>
     <div class="underBar"></div>
   <div class="testimonialQuote">
             <input type="text" id="query_eventID"><button onclick="getEvent()">Get</button>
