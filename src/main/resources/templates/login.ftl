@@ -54,6 +54,28 @@
                 </#list>
             </table>
         </div>
+        
+      <div id="columnLeft">
+      <div class="row cf">
+      <div class="icon">
+          <img src="http://gyazo.com/3a986abda46bbe7bf0d2f5411e40ee5b.png">
+        </div>
+        <div>
+            <table border="1">
+                <tr>
+                    <td>Username</td>
+                    <td>Password</td>                     
+                    <td>Login</td>
+                </tr>                
+                <tr>
+                    <td><input type="text" id="query_id"></td>
+                    <td><input type="text" id="user_password"></td>                   
+                    <td><button onclick="getUserLogin()">Login</button></td>
+                </tr>
+            </table>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
   <div id="testimonials">
@@ -89,6 +111,7 @@
     </div>
     </div>
   </div>
+    
 <div id="map">
   <div class="container cf">
     <div class="contcol">

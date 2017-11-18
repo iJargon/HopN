@@ -101,9 +101,13 @@ public class WebController {
 	}
 	
 	@RequestMapping(value = "/cs480/login/{userID}", method = RequestMethod.GET)
-	User getUserLogin(@PathVariable("userID") String userID) {
+	User getUserLogin(@PathVariable("userID") String userID,
+					 @RequestParam("password") String pass) {
 		User user = userManager.getUser(userID);
-		return user;
+		if (user.getPassword().equals(pass)) {
+			return user;
+		}
+		return null;
 	}
 
 	/**

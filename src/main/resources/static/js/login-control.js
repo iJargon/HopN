@@ -34,7 +34,8 @@ function addUserLogin() {
 						"phone" : userPhone
 					},
 					success : function(result) {
-						location.reload();
+						sessionStorage.setItem('userID', result.userID);
+						window.location.href = '/cs480/events';
 					},
 					error: function (jqXHR, exception) {
 						alert("Failed to add the user. Please check the inputs.");
@@ -45,27 +46,27 @@ function addUserLogin() {
 	}
 }
 
-function getUserLogin(userID) {
+function getUserLogin() {
 	var userID = $('#query_id').val();
-	if (userID) {
+	var userPass = $('#user_password').val();
+
+	if (userID && userPass) {
 		$.ajax(
 				{
 					type : "GET",
 					url  : "/cs480/login/" + userID,
 					data : {
+						"password" : userPass
 					},
 					success : function(result) {
-						$('#result_userID').text(result.userID);
-						$('#result_name').text(result.name);
-						$('#result_username').text(result.username);
-						$('#result_password').text(result.password);
-						$('#result_phone').text(result.phone);
+						sessionStorage.setItem('userID', result.userID);
+						window.location.href = '/cs480/events';
 					},
 					error: function (jqXHR, exception) {
-						alert("Failed to get the user.");
+						alert("Incorrect username/password.");
 					}
 				});
 	} else {
-		alert("Invalid user Id");
+		alert("Invalid username/password.");
 	}
 }
