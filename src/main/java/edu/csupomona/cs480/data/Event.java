@@ -1,7 +1,5 @@
 package edu.csupomona.cs480.data;
 
-import java.util.ArrayList;
-
 /*
  * 	Event object
  */
@@ -12,22 +10,52 @@ public class Event {
 	private String date;
 	private String start_time;
 	private String end_time;
-	private ArrayList<Driver> drivers;
+	private String driver = "Be a Driver!";
+	private String p1 = "Be a Passenger!";
+	private String p2 = "Be a Passenger!";
+	private String p3 = "Be a Passenger!";
+	private String p4 = "Be a Passenger!";
 
-	public void addDriver(User u, int x ) {
-		Driver d = new Driver(u, x);
-		drivers.add(d);
+	public void setDriver(String userID) {
+		this.driver = userID;
 	}
 	
-	public Driver getDriver(User u) {
-		for (Driver driver: drivers) {
-			if (u.getUserID() == driver.getDriver().getUserID()) {
-				return driver;
-			}
-		}
-		return null;
+	public String getDriver() {
+		return driver;
 	}
 	
+	public String getP1() {
+		return p1;
+	}
+
+	public void setP1(String p1) {
+		this.p1 = p1;
+	}
+
+	public String getP2() {
+		return p2;
+	}
+
+	public void setP2(String p2) {
+		this.p2 = p2;
+	}
+
+	public String getP3() {
+		return p3;
+	}
+
+	public void setP3(String p3) {
+		this.p3 = p3;
+	}
+
+	public String getP4() {
+		return p4;
+	}
+
+	public void setP4(String p4) {
+		this.p4 = p4;
+	}
+
 	public String getName() {
 		return name;
 	}

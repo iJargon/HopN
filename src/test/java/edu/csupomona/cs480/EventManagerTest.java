@@ -55,5 +55,25 @@ public class EventManagerTest {
 		
 		assertNull(eventmanager.getEvent(event.getEventID()));
 	}
+	
+	@Test
+	public void testAddCarpoolers() {
+		EventManager eventmanager = new FSEventManager();
+		Event event = new Event();
+		event.setDate("11/18");
+		event.setEnd_time("4pm");
+		event.setEventID("meet");
+		event.setName("standup");
+		event.setLocation("whiteboard");
+		event.setStart_time("3:45pm");
+		event.setDriver("billy");
+		event.setP1("Bob");
+		event.setP2("Charley");
+		event.setP3("Winston");
+		event.setP4("Dur");
+		eventmanager.updateEvent(event);
+		
+		assertEquals("Scrum", eventmanager.getEvent("123").getName());
+	}
 
 }

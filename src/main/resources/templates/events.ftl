@@ -43,6 +43,8 @@
                     <td>End Time</td>
                     <td>Delete</td>
                 </tr>
+                <tr><td><br/></td></tr>
+                <tr><td><br/></td></tr>
                 <#list events as event>
                         <tr>
                             <td>${event.eventID}</td>
@@ -53,6 +55,22 @@
                             <td>${event.end_time}</td>
                             <td><button onclick="deleteEvent('${event.eventID}')">Delete</button></td>
                         </tr>
+                        <tr>
+                        	    <td>${event.driver}</td>
+                            <td>${event.p1}</td>
+                            <td>${event.p2}</td>
+                            <td>${event.p3}</td>
+                            <td>${event.p4}</td>
+                        </tr>
+                        <tr>
+                        		<td><button onclick="driverEvent('${event.eventID}')">Driver</button></td>
+                        		<td><button onclick="p1Event('${event.eventID}')">Passenger 1</button></td>
+                        		<td><button onclick="p2Event('${event.eventID}')">Passenger 2</button></td>
+                        		<td><button onclick="p3Event('${event.eventID}')">Passenger 3</button></td>
+                        		<td><button onclick="p4Event('${event.eventID}')">Passenger 4</button></td>
+                        </tr>
+                        <tr><td><br/></td></tr>
+                        <tr><td><br/></td></tr>
                 </#list>
             </table>
   </div>

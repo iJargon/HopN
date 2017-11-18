@@ -163,6 +163,58 @@ public class WebController {
 		return event;
 	}
 	
+	// update the driver of the event
+	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "driver")
+	Event updateDriverEvent(
+			@PathVariable("eventID") String id,
+			@RequestParam("driver") String driver) {
+		Event event = eventManager.getEvent(id);
+		event.setDriver(driver);
+		eventManager.updateEvent(event);
+		return event;
+	}
+	
+	// update the passengers of the event
+	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "p1")
+	Event updateP1Event(
+			@PathVariable("eventID") String id,
+			@RequestParam("p1") String pass) {
+		Event event = eventManager.getEvent(id);
+		event.setP1(pass);
+		eventManager.updateEvent(event);
+		return event;
+	}
+	
+	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "p2")
+	Event updateP2Event(
+			@PathVariable("eventID") String id,
+			@RequestParam("p2") String pass) {
+		Event event = eventManager.getEvent(id);
+		event.setP2(pass);
+		eventManager.updateEvent(event);
+		return event;
+	}
+	
+	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "p3")
+	Event updateP3Event(
+			@PathVariable("eventID") String id,
+			@RequestParam("p3") String pass) {
+		Event event = eventManager.getEvent(id);
+		event.setP3(pass);
+		eventManager.updateEvent(event);
+		return event;
+	}
+	
+	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "p4")
+	Event updateP4Event(
+			@PathVariable("eventID") String id,
+			@RequestParam("p4") String pass) {
+		Event event = eventManager.getEvent(id);
+		event.setP4(pass);
+		eventManager.updateEvent(event);
+		return event;
+	}
+	
 	@RequestMapping(value = "/cs480/login/{userID}", method = RequestMethod.POST)
 	User updateUserLogin(
 			@PathVariable("userID") String id,

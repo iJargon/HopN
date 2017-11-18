@@ -27,6 +27,5 @@ public class Driver {
 	public int getPassengerCount() {
 		return passengerCount;
 	}	
-	
-	
+		
 }

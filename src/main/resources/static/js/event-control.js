@@ -16,6 +16,96 @@ function deleteEvent(eventID) {
 			});
 }
 
+function driverEvent(eventID) {
+	var user = sessionStorage.getItem("userID");
+	$.ajax(
+		{
+			type : "POST",
+			url : "/cs480/event/" + eventID,
+			data : {
+				"driver" : user
+			},
+			success : function(result) {
+				location.reload();
+			},
+			error: function (jqXHR, exception) {
+				alert("There is already a driver.");
+			}
+		});
+}
+
+function p1Event(eventID) {
+	var user = sessionStorage.getItem("userID");
+	$.ajax(
+		{
+			type : "POST",
+			url : "/cs480/event/" + eventID,
+			data : {
+				"p1" : user
+			},
+			success : function(result) {
+				location.reload();
+			},
+			error: function (jqXHR, exception) {
+				alert("There is already a passenger.");
+			}
+		});
+}
+
+function p2Event(eventID) {
+	var user = sessionStorage.getItem("userID");
+	$.ajax(
+		{
+			type : "POST",
+			url : "/cs480/event/" + eventID,
+			data : {
+				"p2" : user
+			},
+			success : function(result) {
+				location.reload();
+			},
+			error: function (jqXHR, exception) {
+				alert("There is already a passenger.");
+			}
+		});
+}
+
+function p3Event(eventID) {
+	var user = sessionStorage.getItem("userID");
+	$.ajax(
+		{
+			type : "POST",
+			url : "/cs480/event/" + eventID,
+			data : {
+				"p3" : user
+			},
+			success : function(result) {
+				location.reload();
+			},
+			error: function (jqXHR, exception) {
+				alert("There is already a passenger.");
+			}
+		});
+}
+
+function p4Event(eventID) {
+	var user = sessionStorage.getItem("userID");
+	$.ajax(
+		{
+			type : "POST",
+			url : "/cs480/event/" + eventID,
+			data : {
+				"p4" : user
+			},
+			success : function(result) {
+				location.reload();
+			},
+			error: function (jqXHR, exception) {
+				alert("There is already a passenger.");
+			}
+		});
+}
+
 function addEvent() {
 
 	var eventID = $('#input_eventID').val();
