@@ -32,8 +32,7 @@
   <h3>Events List</h3>
   <div class="underBar"></div>
   <div id="steps">
-    <div>
-            <table border="1">            
+            <table border="1" width="100%">            
                 <tr>
                     <td>ID</td>
                     <td>Name</td> 
@@ -43,7 +42,6 @@
                     <td>End Time</td>
                     <td>Delete</td>
                 </tr>
-                <tr><td><br/></td></tr>
                 <tr><td><br/></td></tr>
                 <#list events as event>
                         <tr>
@@ -69,28 +67,29 @@
                         		<td><button onclick="p3Event('${event.eventID}')">Passenger 3</button></td>
                         		<td><button onclick="p4Event('${event.eventID}')">Passenger 4</button></td>
                         </tr>
-                        <tr><td><br/></td></tr>
-                        <tr><td><br/></td></tr>
+                        <br/><br/>
                 </#list>
             </table>
-  </div>
 </div>
   <div id="testimonials">
     <h3>Create an Event</h3>  
   <div class="underBar"></div>
-    
-    <div id="columnLeft">
-      <div class="row cf">
-        <div>
-            <table border="1">
-                <tr>
+  
+  <div id="steps">
+            <table border="1">     
+				<tr>
+					<td>
+						<br/>
+					</td>
+				</tr>			
+                <tr >
                     <td>Event ID</td>
                     <td>Name</td> 
                     <td>Location</td>                     
                     <td>Date</td>
                     <td>Start Time</td>
                     <td>End Time</td>
-                </tr>                
+                </tr>
                 <tr>
                     <td><input type="text" id="input_eventID"></td>
                     <td><input type="text" id="input_event_name"></td>
@@ -98,23 +97,12 @@
                     <td><input type="text" id="input_event_date"></td> 
                     <td><input type="text" id="input_event_start_time"></td> 
                     <td><input type="text" id="input_event_end_time"></td>                     
-                    <td><button onclick="addEvent()">Add</button></td>
+                </tr>
+                <tr align="middle">
+                    <td colspan="6"><button onclick="addEvent()">Add</button></td>
                 </tr>
             </table>
-        </div>
-      </div>
-      <div class="row cf">
-        
-      </div>
-      <div class="row cf">
-        
-      </div>
-    </div>
-
-      <div class="row cf">
-        
-        
-      </div>
+</div>
     </div>
     </div>
   </div>
@@ -123,7 +111,7 @@
     <div class="underBar"></div>
   <div class="testimonialQuote">
             <input type="text" id="query_eventID"><button onclick="getEvent()">Get</button>
-            <table border="1">
+            <table border="1" width="100%">
                 <tr>
                     <td>Event ID</td>
                     <td>Name</td>
@@ -146,27 +134,27 @@
 <div id="map">
   <div class="container cf">
     <div class="contcol">
-      <h6>Herp</h6>
+      <h6>More</h6>
       <ul>
+        <li><a href="home">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="login">Sign Up</a></li>
-        <li><a href="login">Login to your account</a></li>
+        <li><a href="#">Contact Support</a></li>
       </ul>
     </div>
     <div class="contcol">
       <h6>Creators</h6>
       <ul>
-        <li><a href="#">John Canalita</a></li>
-        <li><a href="#">Nandita Chauhan</a></li>
-        <li><a href="#">Gretchen Lai</a></li>
-        <li><a href="#">Nicole Lee</a></li>
+        <li><a href="https://www.facebook.com/Valan12" target="_blank">John Canalita</a></li>
+        <li><a href="https://www.facebook.com/nandita.chauhan.9" target="_blank">Nandita Chauhan</a></li>
+        <li><a href="https://www.facebook.com/gretchy.lai" target="_blank">Gretchen Lai</a></li>
+        <li><a href="https://www.facebook.com/nicolelee2412" target="_blank">Nicole Lee</a></li>
       </ul>
     </div>
     <div class="contcol">
-      <h6>Derp</h6>
+      <h6>User</h6>
       <ul>
-        <li><a href="home">Home</a></li>
-        <li><a href="#">Contact Support</a></li>
+        <li><a href="login">Sign Up</a></li>
+        <li><a href="login">Login to your account</a></li>
       </ul>
     </div>
   </div>

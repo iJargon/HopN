@@ -41,27 +41,27 @@
 <div id="map">
   <div class="container cf">
     <div class="contcol">
-      <h6>Herp</h6>
+      <h6>More</h6>
       <ul>
+        <li><a href="home">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="login">Sign Up</a></li>
-        <li><a href="login">Login to your account</a></li>
+        <li><a href="#">Contact Support</a></li>
       </ul>
     </div>
     <div class="contcol">
       <h6>Creators</h6>
       <ul>
-        <li><a href="#">John Canalita</a></li>
-        <li><a href="#">Nandita Chauhan</a></li>
-        <li><a href="#">Gretchen Lai</a></li>
-        <li><a href="#">Nicole Lee</a></li>
+        <li><a href="https://www.facebook.com/Valan12" target="_blank">John Canalita</a></li>
+        <li><a href="https://www.facebook.com/nandita.chauhan.9" target="_blank">Nandita Chauhan</a></li>
+        <li><a href="https://www.facebook.com/gretchy.lai" target="_blank">Gretchen Lai</a></li>
+        <li><a href="https://www.facebook.com/nicolelee2412" target="_blank">Nicole Lee</a></li>
       </ul>
     </div>
     <div class="contcol">
-      <h6>Derp</h6>
+      <h6>User</h6>
       <ul>
-        <li><a href="home">Home</a></li>
-        <li><a href="#">Contact Support</a></li>
+        <li><a href="login">Sign Up</a></li>
+        <li><a href="login">Login to your account</a></li>
       </ul>
     </div>
   </div>
