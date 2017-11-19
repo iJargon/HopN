@@ -11,7 +11,7 @@
 
 <div id="header" class="cf">
   <div id="logo">
-    <a href="home"><img src="http://gyazo.com/fb513813a699740c7cd2dbcac7cbcafd.png"><span class="by">by</span> <img src="http://i40.tinypic.com/o7n2xg.jpg" height="25"></a>
+    <a href="home"><img src="http://i63.tinypic.com/rrrsyw.jpg" height="40"><span class="by">by</span><img src="http://i63.tinypic.com/w14s4w.jpg" height="25"></a>
   </div>
   <div id="menu">
     <ul>
@@ -141,10 +141,8 @@
       <h6>Herp</h6>
       <ul>
         <li><a href="#">About</a></li>
-        <li><a href="#">Sign Up</a></li>
-        <li><a href="#">Login to your account</a></li>
-        <li><a href="#">Plans & Pricing</a></li>
-        <li><a href="#">Support</a></li>
+        <li><a href="login">Sign Up</a></li>
+        <li><a href="login">Login to your account</a></li>
       </ul>
     </div>
     <div class="contcol">
@@ -159,10 +157,8 @@
     <div class="contcol">
       <h6>Derp</h6>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Brands</a></li>
-        <li><a href="#">Investors</a></li>
-        <li><a href="#">Contact Inteia</a></li>
+        <li><a href="home">Home</a></li>
+        <li><a href="#">Contact Support</a></li>
       </ul>
     </div>
   </div>
