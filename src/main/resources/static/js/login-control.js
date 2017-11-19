@@ -38,11 +38,11 @@ function addUserLogin() {
 						window.location.href = '/cs480/events';
 					},
 					error: function (jqXHR, exception) {
-						alert("Failed to add the user. Please check the inputs.");
+						alert("Could not successfuly create login, try again.");
 					}
 				});
 	} else {
-		alert("Invalid user Id");
+		alert("Invalid input, one or more of the text fields is missing.");
 	}
 }
 
