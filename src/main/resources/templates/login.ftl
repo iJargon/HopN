@@ -26,21 +26,12 @@
   <h1>Login or Sign Up!</h1>
   <h2>[insert pun or something here idk]</h2>
 </div>
-<div id="columnRight">
-
-</div>
 <div id="howItWorks">
-  <h3>Login</h3>
+  <h3><br/>Login  <img src="http://gyazo.com/3a986abda46bbe7bf0d2f5411e40ee5b.png"></h3>
   <div class="underBar"></div>
-  <div id="steps">
-    <div>
-      <div id="columnLeft">
-      <div class="row cf">
-      <div class="icon">
-          <img src="http://gyazo.com/3a986abda46bbe7bf0d2f5411e40ee5b.png">
-        </div>
-        <div>
+  <div id="steps" align="center">
             <table border="1">
+            <tr><td><br/></td></tr>
                 <tr>
                     <td>Username</td>
                     <td>Password</td>                     
@@ -52,22 +43,14 @@
                     <td><button onclick="getUserLogin()">Login</button></td>
                 </tr>
             </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <div id="testimonials">
-    <h3>Sign Up</h3>
+</div></div>
+  <div id="howItWorks">
+    <h3><br/>Sign Up  <img src="http://gyazo.com/3a986abda46bbe7bf0d2f5411e40ee5b.png"></h3>
     <div class="underBar"></div>
     
-    <div id="columnLeft">
-      <div class="row cf">
-      <div class="icon">
-          <img src="http://gyazo.com/3a986abda46bbe7bf0d2f5411e40ee5b.png">
-        </div>
-        <div>
-            <table border="1">
+    <div id="steps" align="center">
+            <table border="1" align="center">
+            	<tr><td><br/></td></tr>
                 <tr>
                     <td>Username</td>
                     <td>Name</td> 
@@ -83,14 +66,9 @@
                     <td><button onclick="addUserLogin()">Add</button></td>
                 </tr>
             </table>
-        </div>
-      </div>
-    </div>
-     
     </div>
     </div>
-  </div>
-    
+
 <div id="map">
   <div class="container cf">
     <div class="contcol">
