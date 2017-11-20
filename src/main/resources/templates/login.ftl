@@ -104,10 +104,10 @@
     <div class="contcol">
       <h6>Creators</h6>
       <ul>
-        <li><a href="https://www.facebook.com/Valan12" target="_blank">John Canalita</a></li>
-        <li><a href="https://www.facebook.com/nandita.chauhan.9" target="_blank">Nandita Chauhan</a></li>
-        <li><a href="https://www.facebook.com/gretchy.lai" target="_blank">Gretchen Lai</a></li>
-        <li><a href="https://www.facebook.com/nicolelee2412" target="_blank">Nicole Lee</a></li>
+        <li><a href="https://github.com/jbcanalita" target="_blank">John Canalita</a></li>
+        <li><a href="https://github.com/nanditachauhan1" target="_blank">Nandita Chauhan</a></li>
+        <li><a href="https://github.com/gretchy" target="_blank">Gretchen Lai</a></li>
+        <li><a href="https://github.com/nicolelee24" target="_blank">Nicole Lee</a></li>
       </ul>
     </div>
     <div class="contcol">

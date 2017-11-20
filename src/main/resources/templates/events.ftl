@@ -26,12 +26,41 @@
         <h1>Current Events Available</h1>
         <h2>[insert pun or something here idk]</h2>
     </div>
-    <div id="columnRight"></div>
     
-    <div id="howItWorks">
+    <div id="whatWeAnalyze">
+        <h3>Search for an Event</h3>
+        <div class="underBar"></div>
+        <div class="testimonialQuote">
+            <input type="text" id="query_eventID"><button onclick="getEvent()">Search</button>
+            <table border="1" width="100%">
+            	<tr><td><br/></td></tr>
+                <tr>
+                    <td>Event ID</td>
+                    <td>Name</td>
+                    <td>Location</td>
+                    <td>Date</td>
+                    <td>Start Time</td>
+                    <td>End Time</td>
+                </tr>
+                <tr>
+                    <td><label id="result_eventID"></td>
+                    <td><label id="result_event_name"></td>
+                    <td><label id="result_location"></td>
+                    <td><label id="result_date"></td>
+                    <td><label id="result_start_time"></td>
+                    <td><label id="result_end_time"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="whatWeAnalyze">
+        <tr>
+            <td><br/></td>
+        </tr>
         <h3>Events List</h3>
         <div class="underBar"></div>
         <div id="steps">
+        <div class="testimonialQuote">
             <table border="1" width="100%">
                 <tr><td><br/></td></tr>            
                 <tr>
@@ -68,18 +97,17 @@
                     	<td><button onclick="p3Event('${event.eventID}')">Passenger 3</button></td>
                     	<td><button onclick="p4Event('${event.eventID}')">Passenger 4</button></td>
                     </tr>
-                    <tr>
-                      	<td><br/></td>
-                    </tr>
+                    
                 </#list>
             </table>
+            </div>
         </div>
 	</div>
-    <div id="testimonials">
+    <div id="whatWeAnalyze">
         <h3>Create an Event</h3>  
         <div class="underBar"></div>
-        <div id="steps">
-            <table border="1">     
+        <div class="testimonialQuote">
+            <table border="1" width="100%" align="center">     
 				<tr>
 					<td>
 						<br/>
@@ -94,41 +122,15 @@
                     <td>End Time</td>
                 </tr>
                 <tr>
-                    <td><input type="text" id="input_eventID"></td>
-                    <td><input type="text" id="input_event_name"></td>
-                    <td><input type="text" id="input_event_location"></td>
-                    <td><input type="text" id="input_event_date"></td> 
-                    <td><input type="text" id="input_event_start_time"></td> 
-                    <td><input type="text" id="input_event_end_time"></td>                     
+                    <td><input type="text" id="input_eventID" size="15"></td>
+                    <td><input type="text" id="input_event_name" size="15"></td>
+                    <td><input type="text" id="input_event_location" size="15"></td>
+                    <td><input type="text" id="input_event_date" size="15"></td> 
+                    <td><input type="text" id="input_event_start_time" size="15"></td> 
+                    <td><input type="text" id="input_event_end_time" size="15"></td>                     
                 </tr>
                 <tr align="middle">
-                    <td colspan="6"><button onclick="addEvent()">Add</button></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-	<div id="whatWeAnalyze">
-        <h3>Search for an Event</h3>
-        <div class="underBar"></div>
-        <div class="testimonialQuote">
-            <input type="text" id="query_eventID"><button onclick="getEvent()">Get</button>
-            <table border="1" width="100%">
-            	<tr><td><br/></td></tr>
-                <tr>
-                    <td>Event ID</td>
-                    <td>Name</td>
-                    <td>Location</td>
-                    <td>Date</td>
-                    <td>Start Time</td>
-                    <td>End Time</td>
-                </tr>
-                <tr>
-                    <td><label id="result_eventID"></td>
-                    <td><label id="result_event_name"></td>
-                    <td><label id="result_location"></td>
-                    <td><label id="result_date"></td>
-                    <td><label id="result_start_time"></td>
-                    <td><label id="result_end_time"></td>
+                    <td colspan="6"><br/><button onclick="addEvent()">Create</button></td>
                 </tr>
             </table>
         </div>
@@ -146,11 +148,11 @@
             <div class="contcol">
                 <h6>Creators</h6>
                 <ul>
-                    <li><a href="https://www.facebook.com/Valan12" target="_blank">John Canalita</a></li>
-                    <li><a href="https://www.facebook.com/nandita.chauhan.9" target="_blank">Nandita Chauhan</a></li>
-                    <li><a href="https://www.facebook.com/gretchy.lai" target="_blank">Gretchen Lai</a></li>
-                    <li><a href="https://www.facebook.com/nicolelee2412" target="_blank">Nicole Lee</a></li>
-                </ul>
+        <li><a href="https://github.com/jbcanalita" target="_blank">John Canalita</a></li>
+        <li><a href="https://github.com/nanditachauhan1" target="_blank">Nandita Chauhan</a></li>
+        <li><a href="https://github.com/gretchy" target="_blank">Gretchen Lai</a></li>
+        <li><a href="https://github.com/nicolelee24" target="_blank">Nicole Lee</a></li>
+      </ul>
             </div>
             <div class="contcol">
                 <h6>User</h6>
