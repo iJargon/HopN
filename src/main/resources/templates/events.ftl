@@ -97,7 +97,8 @@
                     	<td><button onclick="p3Event('${event.eventID}')">Passenger 3</button></td>
                     	<td><button onclick="p4Event('${event.eventID}')">Passenger 4</button></td>
                     </tr>
-                    
+                    <tr><td><br/></td></tr>
+                    <tr><td><br/></td></tr>
                 </#list>
             </table>
             </div>

@@ -35,7 +35,6 @@
                 <tr>
                     <td>Username</td>
                     <td>Password</td>                     
-                    <td>Login</td>
                 </tr>                
                 <tr>
                     <td><input type="text" id="query_id"></td>
@@ -56,14 +55,13 @@
                     <td>Name</td> 
                     <td>Password</td>
                     <td>Phone</td>                     
-                    <td>Add</td>
                 </tr>                
                 <tr>
                     <td><input type="text" id="input_userID"></td>
                     <td><input type="text" id="input_name"></td>
                     <td><input type="text" id="input_password"></td>
                     <td><input type="text" id="input_phone"></td>                    
-                    <td><button onclick="addUserLogin()">Add</button></td>
+                    <td><button onclick="addUserLogin()">Sign Up</button></td>
                 </tr>
             </table>
     </div>

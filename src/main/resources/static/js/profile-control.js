@@ -11,9 +11,14 @@ function bodyOnLoad() {
 			data : {
 			},
 			success : function(result) {
-				$('#username').text(result.userID);
-				$('#name').text(result.name);
-				$('#phone').text(result.phone);
+				if (result.userID == "" || result.userID == null) {
+					window.location.href = '/cs480/events';
+				} else {
+					$('#username').text(result.userID);
+					$('#name').text(result.name);
+					$('#phone').text(result.phone);
+				}
+				
 			},
 			error: function (jqXHR, exception) {
 				alert("Error: Could not load profile.")
