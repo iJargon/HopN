@@ -348,5 +348,12 @@ public class WebController {
 		modelAndViewLogin.addObject("users", listAllUsersLogin());
 		return modelAndViewLogin;
 	}
+	
+	@RequestMapping(value = "/cs480/users/{userID}/profile", method = RequestMethod.GET)
+	ModelAndView getProfilepage() {
+		ModelAndView modelAndViewProfile = new ModelAndView("profile");
+		modelAndViewProfile.addObject("users", listAllUsers());
+		return modelAndViewProfile;
+	}	
 
 }

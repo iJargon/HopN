@@ -55,11 +55,11 @@
                         <td><button onclick="deleteEvent('${event.eventID}')">Delete</button></td>
                     </tr>
                     <tr>
-                        <td><a href = "users/${event.driver}">${event.driver}</a></td>
-                        <td><a href = "users/${event.p1}">${event.p1}</a></td>
-                        <td><a href = "users/${event.p2}">${event.p2}</a></td>
-                        <td><a href = "users/${event.p3}">${event.p3}</a></td>
-                        <td><a href = "users/${event.p4}">${event.p4}</a></td>
+                        <td><a href = "users/${event.driver}/profile">${event.driver}</a></td>
+                        <td><a href = "users/${event.p1}/profile">${event.p1}</a></td>
+                        <td><a href = "users/${event.p2}/profile">${event.p2}</a></td>
+                        <td><a href = "users/${event.p3}/profile">${event.p3}</a></td>
+                        <td><a href = "users/${event.p4}/profile">${event.p4}</a></td>
                     </tr>
                     <tr>
                     	<td><button onclick="driverEvent('${event.eventID}')">Driver</button></td>
