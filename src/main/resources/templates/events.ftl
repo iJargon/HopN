@@ -42,13 +42,14 @@
                     <td>Start Time</td>
                     <td>End Time</td>
                 </tr>
+                <tr><td><br/></td></tr>
                 <tr>
-                    <td><label id="result_eventID"></td>
-                    <td><label id="result_event_name"></td>
-                    <td><label id="result_location"></td>
-                    <td><label id="result_date"></td>
-                    <td><label id="result_start_time"></td>
-                    <td><label id="result_end_time"></td>
+                    <td><font size="4"><label id="result_eventID"></font></td>
+                    <td><font size="4"><label id="result_event_name"></font></td>
+                    <td><font size="4"><label id="result_location"></font></td>
+                    <td><font size="4"><label id="result_date"></font></td>
+                    <td><font size="4"><label id="result_start_time"></font></td>
+                    <td><font size="4"><label id="result_end_time"></font></td>
                 </tr>
             </table>
         </div>
@@ -70,25 +71,25 @@
                     <td>Date</td>
                     <td>Start Time</td>
                     <td>End Time</td>
-                    <td>Delete</td>
                 </tr>
                 <tr><td><br/></td></tr>
                 <#list events as event>
                     <tr>
-                        <td>${event.eventID}</td>
-                        <td>${event.name}</td>
-                        <td>${event.location}</td>
-                        <td>${event.date}</td>
-                        <td>${event.start_time}</td>
-                        <td>${event.end_time}</td>
+                        <td><font size="4">${event.eventID}</font></td>
+                        <td><font size="4">${event.name}</font></td>
+                        <td><font size="4">${event.location}</font></td>
+                        <td><font size="4">${event.date}</font></td>
+                        <td><font size="4">${event.start_time}</font></td>
+                        <td><font size="4">${event.end_time}</font></td>
                         <td><button onclick="deleteEvent('${event.eventID}')">Delete</button></td>
                     </tr>
+                    <tr><td><br/></td></tr>
                     <tr>
-                        <td><a href = "users/${event.driver}/profile">${event.driver}</a></td>
-                        <td><a href = "users/${event.p1}/profile">${event.p1}</a></td>
-                        <td><a href = "users/${event.p2}/profile">${event.p2}</a></td>
-                        <td><a href = "users/${event.p3}/profile">${event.p3}</a></td>
-                        <td><a href = "users/${event.p4}/profile">${event.p4}</a></td>
+                        <td><font size="3"><a href = "users/${event.driver}/profile">${event.driver}</a></font></td>
+                        <td><font size="3"><a href = "users/${event.p1}/profile">${event.p1}</a></font></td>
+                        <td><font size="3"><a href = "users/${event.p2}/profile">${event.p2}</a></font></td>
+                        <td><font size="3"><a href = "users/${event.p3}/profile">${event.p3}</a></font></td>
+                        <td><font size="3"><a href = "users/${event.p4}/profile">${event.p4}</a></font></td>
                     </tr>
                     <tr>
                     	<td><button onclick="driverEvent('${event.eventID}')">Driver</button></td>
