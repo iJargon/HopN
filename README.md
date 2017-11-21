@@ -1,11 +1,13 @@
-Assignment 8 works
-Successful Build and Deployment done automatically 
+HopN Web Service
+
 Overview
 --------
 
-The skeleton of the demo web project for CS480.
+HopN is a carpool service designed to serve the CPP community.
 
-This project is designed to let you practice the different aspects of software engineering, such as version control, design, tests, build, deployment, and maintenance.
+With HopN you can . . . 
+- Create postings for events you are going to.
+- Carpool with other CPP students.
 
 Environment Setup
 -----------------
