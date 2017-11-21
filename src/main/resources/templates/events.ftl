@@ -10,7 +10,7 @@
 <body>    
     <div id="header" class="cf">
         <div id="logo">
-            <a href="home"><img src="http://i63.tinypic.com/rrrsyw.jpg" height="40"><span class="by">by</span><img src="http://i63.tinypic.com/w14s4w.jpg" height="25"></a>
+            <a href="home"><img src="http://i63.tinypic.com/rrrsyw.jpg" height="40"><span class="by">by</span><img src="http://i64.tinypic.com/2d6jwue.jpg" height="25"></a>
         </div>
         <div id="menu">
             <ul>

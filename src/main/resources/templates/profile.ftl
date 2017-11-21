@@ -11,7 +11,7 @@
 
 <div id="header" class="cf">
   <div id="logo">
-    <a href="../../home"><img src="http://i63.tinypic.com/rrrsyw.jpg" height="40"><span class="by">by</span><img src="http://i63.tinypic.com/w14s4w.jpg" height="25"></a>
+    <a href="../../home"><img src="http://i63.tinypic.com/rrrsyw.jpg" height="40"><span class="by">by</span><img src="http://i64.tinypic.com/2d6jwue.jpg" height="25"></a>
   </div>
   <div id="menu">
     <ul>
@@ -35,17 +35,17 @@
   <div id="steps">
     <table>
     <tr>
-        <td width="20%">Username:</td>
+        <td style="height:21px" width="20%">Username:</td>
         <td width="20%"></td>
         <td width="60%"><label id="username"></label></td>
     </tr>
     <tr>
-        <td width="20%">Name:</td>
+        <td style="height:21px" width="20%">Name:</td>
         <td width="20%"></td>
         <td width="60%"><label id="name"></label></td>
     </tr>
     <tr>
-        <td width="20%">Phone:</td>
+        <td style="height:21px" width="20%">Phone:</td>
         <td width="20%"></td>
         <td width="60%"><label id="phone"></label></td>
     </tr>
