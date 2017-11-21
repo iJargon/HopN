@@ -70,7 +70,7 @@ public class WebController {
 	 * in your web browser, type the link:
 	 * 	http://localhost:8080/cs480/ping
 	 */
-	@RequestMapping(value = "/cs480/ping", method = RequestMethod.GET)
+	@RequestMapping(value = "/ping", method = RequestMethod.GET)
 	String healthCheck() {
 		// You can replace this with other string,
 		// and run the application locally to check your changes
@@ -88,19 +88,19 @@ public class WebController {
 	 * Try it in your web browser:
 	 * 	http://localhost:8080/cs480/users/user101
 	 */
-	@RequestMapping(value = "/cs480/users/{userID}", method = RequestMethod.GET)
+	@RequestMapping(value = "/users/{userID}", method = RequestMethod.GET)
 	User getUser(@PathVariable("userID") String userID) {
 		User user = userManager.getUser(userID);
 		return user;
 	}
 	
-	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.GET)
+	@RequestMapping(value = "/event/{eventID}", method = RequestMethod.GET)
 	Event getEvent(@PathVariable("eventID") String eventID) {
 		Event event = eventManager.getEvent(eventID);
 		return event;
 	}
 	
-	@RequestMapping(value = "/cs480/login/{userID}", method = RequestMethod.GET)
+	@RequestMapping(value = "/login/{userID}", method = RequestMethod.GET)
 	User getUserLogin(@PathVariable("userID") String userID,
 					 @RequestParam("password") String pass) {
 		User user = userManager.getUser(userID);
@@ -129,7 +129,7 @@ public class WebController {
 	 * @param phone
 	 * @return
 	 */
-	@RequestMapping(value = "/cs480/users/{userID}", method = RequestMethod.POST)
+	@RequestMapping(value = "/users/{userID}", method = RequestMethod.POST)
 	User updateUser(
 			@PathVariable("userID") String id,
 			@RequestParam("name") String name,
@@ -144,7 +144,7 @@ public class WebController {
 		return user;
 	}
 	
-	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST)
+	@RequestMapping(value = "/event/{eventID}", method = RequestMethod.POST)
 	Event updateEvent(
 			@PathVariable("eventID") String id,
 			@RequestParam("event_name") String name,
@@ -164,7 +164,7 @@ public class WebController {
 	}
 	
 	// update the driver of the event
-	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "driver")
+	@RequestMapping(value = "/event/{eventID}", method = RequestMethod.POST, params = "driver")
 	Event updateDriverEvent(
 			@PathVariable("eventID") String id,
 			@RequestParam("driver") String driver) {
@@ -175,7 +175,7 @@ public class WebController {
 	}
 	
 	// update the passengers of the event
-	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "p1")
+	@RequestMapping(value = "/event/{eventID}", method = RequestMethod.POST, params = "p1")
 	Event updateP1Event(
 			@PathVariable("eventID") String id,
 			@RequestParam("p1") String pass) {
@@ -185,7 +185,7 @@ public class WebController {
 		return event;
 	}
 	
-	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "p2")
+	@RequestMapping(value = "/event/{eventID}", method = RequestMethod.POST, params = "p2")
 	Event updateP2Event(
 			@PathVariable("eventID") String id,
 			@RequestParam("p2") String pass) {
@@ -195,7 +195,7 @@ public class WebController {
 		return event;
 	}
 	
-	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "p3")
+	@RequestMapping(value = "/event/{eventID}", method = RequestMethod.POST, params = "p3")
 	Event updateP3Event(
 			@PathVariable("eventID") String id,
 			@RequestParam("p3") String pass) {
@@ -205,7 +205,7 @@ public class WebController {
 		return event;
 	}
 	
-	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.POST, params = "p4")
+	@RequestMapping(value = "/event/{eventID}", method = RequestMethod.POST, params = "p4")
 	Event updateP4Event(
 			@PathVariable("eventID") String id,
 			@RequestParam("p4") String pass) {
@@ -215,7 +215,7 @@ public class WebController {
 		return event;
 	}
 	
-	@RequestMapping(value = "/cs480/login/{userID}", method = RequestMethod.POST)
+	@RequestMapping(value = "/login/{userID}", method = RequestMethod.POST)
 	User updateUserLogin(
 			@PathVariable("userID") String id,
 			@RequestParam("name") String name,
@@ -256,7 +256,7 @@ public class WebController {
 		return joiner.join("Nicole", "Loves", null, "Chicken", "Nuggets", null);
 	}
 */
-	@RequestMapping(value = "/cs480/nandita", method = RequestMethod.GET)
+	@RequestMapping(value = "/nandita", method = RequestMethod.GET)
 	public static
 	String nandita() throws IOException {
 		Document doc = Jsoup.connect("http://en.wikipedia.org/").get();
@@ -277,19 +277,19 @@ public class WebController {
 	 *
 	 * @param userId
 	 */
-	@RequestMapping(value = "/cs480/users/{userID}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/users/{userID}", method = RequestMethod.DELETE)
 	void deleteUser(
 			@PathVariable("userID") String userID) {
 		userManager.deleteUser(userID);
 	}
 	
-	@RequestMapping(value = "/cs480/event/{eventID}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/event/{eventID}", method = RequestMethod.DELETE)
 	void deleteEvent(
 			@PathVariable("eventID") String eventID) {
 		eventManager.deleteEvent(eventID);
 	}
 	
-	@RequestMapping(value = "/cs480/login/{userID}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/login/{userID}", method = RequestMethod.DELETE)
 	void deleteUserLogin(
 			@PathVariable("userID") String userID) {
 		userManager.deleteUser(userID);
@@ -300,27 +300,27 @@ public class WebController {
 	 *
 	 * @return
 	 */
-	@RequestMapping(value = "/cs480/users/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/users/list", method = RequestMethod.GET)
 	List<User> listAllUsers() {
 		return userManager.listAllUsers();
 	}
 	
-	@RequestMapping(value = "/cs480/events/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/events/list", method = RequestMethod.GET)
 	List<Event> listAllEvents() {
 		return eventManager.listAllEvents();
 	}
 	
-	@RequestMapping(value = "/cs480/login/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/login/list", method = RequestMethod.GET)
 	List<User> listAllUsersLogin() {
 		return userManager.listAllUsers();
 	}
 	
-	@RequestMapping(value = "/cs480/users/list/size", method = RequestMethod.GET)
+	@RequestMapping(value = "/users/list/size", method = RequestMethod.GET)
 	int getUserSize() {
 		return userManager.listAllUsers().size();
 	}
 	
-	@RequestMapping(value = "/cs480/events/list/size", method = RequestMethod.GET)
+	@RequestMapping(value = "/events/list/size", method = RequestMethod.GET)
 	int getEventSize() {
 		return eventManager.listAllEvents().size();
 	}
@@ -331,35 +331,35 @@ public class WebController {
 	 * This method provide a simple web UI for you to test the different
 	 * functionalities used in this web service.
 	 */
-	@RequestMapping(value = "/cs480/home", method = RequestMethod.GET)
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	ModelAndView getHomepage() {
 		ModelAndView modelAndView = new ModelAndView("home");
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
 	}
 	
-	@RequestMapping(value = "/cs480/users", method = RequestMethod.GET)
+	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	ModelAndView getUserspage() {
 		ModelAndView modelAndView = new ModelAndView("users");
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
 	}
 	
-	@RequestMapping(value = "/cs480/events", method = RequestMethod.GET)
+	@RequestMapping(value = "/events", method = RequestMethod.GET)
 	ModelAndView getEventspage() {
 		ModelAndView modelAndViewEvents = new ModelAndView("events");
 		modelAndViewEvents.addObject("events", listAllEvents());
 		return modelAndViewEvents;
 	}
 	
-	@RequestMapping(value = "/cs480/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	ModelAndView getLoginpage() {
 		ModelAndView modelAndViewLogin = new ModelAndView("login");
 		modelAndViewLogin.addObject("users", listAllUsersLogin());
 		return modelAndViewLogin;
 	}
 	
-	@RequestMapping(value = "/cs480/users/{userID}/profile", method = RequestMethod.GET)
+	@RequestMapping(value = "/users/{userID}/profile", method = RequestMethod.GET)
 	ModelAndView getProfilepage() {
 		ModelAndView modelAndViewProfile = new ModelAndView("profile");
 		modelAndViewProfile.addObject("users", listAllUsers());
