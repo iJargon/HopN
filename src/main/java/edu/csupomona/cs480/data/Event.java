@@ -11,10 +11,10 @@ public class Event {
 	private String start_time;
 	private String end_time;
 	private String driver = "Be a Driver!";
-	private String p1 = "Be a Passenger!";
-	private String p2 = "Be a Passenger!";
-	private String p3 = "Be a Passenger!";
-	private String p4 = "Be a Passenger!";
+	private String p1 = "HOPN!";
+	private String p2 = "HOPN!";
+	private String p3 = "HOPN!";
+	private String p4 = "HOPN!";
 
 	public void setDriver(String userID) {
 		this.driver = userID;
