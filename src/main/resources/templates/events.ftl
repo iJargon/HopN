@@ -24,7 +24,7 @@
     </div>
     <div id="splashBar">
         <h1>Current Events Available</h1>
-        <h2>[insert pun or something here idk]</h2>
+        <h2>Search, Create, and HopN!</h2>
     </div>
     
     <div id="whatWeAnalyze">

@@ -1,4 +1,33 @@
 // This is the version used for regular HTML + FreeMarker with jQuery
+function bodyOnLoad() {
+	$.ajax(
+		{
+			type : "GET",
+			url  : "/cs480/users/list/size",
+			data : {
+			},
+			success : function(result) {
+				$('#numOfUsers').text(result);
+				$.ajax(
+					{
+						type : "GET",
+						url  : "/cs480/events/list/size",
+						data : {
+						},
+						success : function(result1) {
+							$('#numOfEvents').text(result1);
+						},
+						error: function (jqXHR, exception) {
+							$('#numOfEvents').text("13");
+						}
+					});
+			},
+			error: function (jqXHR, exception) {
+				$('#numOfUsers').text("480");
+			}
+		});
+}
+
 
 function healthCheck() {
 	$.ajax(

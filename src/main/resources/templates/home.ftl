@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
 
-<body>    
+<body onLoad="bodyOnLoad()">    
 
 <div id="header" class="cf">
   <div id="logo">
@@ -23,16 +23,16 @@
   </div>
 </div>
 <div id="splashBar">
-  <h1>Carpool / Rideshare system within the CPP community for events around Socal.</h1>
-  <h2>With CPP HopN, you can... GOD I HOPE THIS WORKS!</h2>
+  <h1>HopN</h1>
+  <h2>A Carpool service for the CPP community.</h2>
 </div>
 <div id="statsBar">
   <ul>
     <li></li>
-    <li><p><span class="statNumber">13</span></p>
-      <p>Current Events</p></li>
-    <li><p><span class="statNumber">480</span></p>
-      <p>Users</p></li>
+    <li><p><span class="statNumber"><label id="numOfEvents"></label></span></p>
+      <p>Total Events</p></li>
+    <li><p><span class="statNumber"><label id="numOfUsers"></label></span></p>
+      <p>Total Users</p></li>
     <li></li>
   </ul>
 </div>

@@ -24,7 +24,7 @@
 </div>
 <div id="splashBar">
   <h1>Login or Sign Up!</h1>
-  <h2>[insert pun or something here idk]</h2>
+  <h2>HopN is the carpool service you need!</h2>
 </div>
 <div id="howItWorks">
   <h3><br/>Login  <img src="http://gyazo.com/3a986abda46bbe7bf0d2f5411e40ee5b.png"></h3>

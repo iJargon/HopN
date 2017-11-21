@@ -34,6 +34,7 @@
   <div class="underBar"></div>
   <div id="steps">
     <table>
+    	<tr><td><br/></td></tr>
     <tr>
         <td style="height:21px" width="20%">Username:</td>
         <td width="20%"></td>

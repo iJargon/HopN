@@ -314,6 +314,16 @@ public class WebController {
 	List<User> listAllUsersLogin() {
 		return userManager.listAllUsers();
 	}
+	
+	@RequestMapping(value = "/cs480/users/list/size", method = RequestMethod.GET)
+	int getUserSize() {
+		return userManager.listAllUsers().size();
+	}
+	
+	@RequestMapping(value = "/cs480/events/list/size", method = RequestMethod.GET)
+	int getEventSize() {
+		return eventManager.listAllEvents().size();
+	}
 
 	
 	/*********** Web UI Test Utility **********/
