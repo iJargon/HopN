@@ -4,7 +4,7 @@ function deleteUserLogin(userId) {
 	$.ajax(
 			{
 				type : "DELETE",
-				url  : "/cs480/login/" + userId,
+				url  : "/login/" + userId,
 				data : {
 				},
 				success : function(result) {
@@ -27,7 +27,7 @@ function addUserLogin() {
 		$.ajax(
 				{
 					type : "POST",
-					url  : "/cs480/login/" + userID,
+					url  : "/login/" + userID,
 					data : {
 						"name" : userName,
 						"password" : userPassword,
@@ -35,7 +35,7 @@ function addUserLogin() {
 					},
 					success : function(result) {
 						sessionStorage.setItem('userID', result.userID);
-						window.location.href = '/cs480/events';
+						window.location.href = '/events';
 					},
 					error: function (jqXHR, exception) {
 						alert("Could not successfuly create login, try again.");
@@ -54,13 +54,13 @@ function getUserLogin() {
 		$.ajax(
 				{
 					type : "GET",
-					url  : "/cs480/login/" + userID,
+					url  : "/login/" + userID,
 					data : {
 						"password" : userPass
 					},
 					success : function(result) {
 						sessionStorage.setItem('userID', result.userID);
-						window.location.href = '/cs480/events';
+						window.location.href = '/events';
 					},
 					error: function (jqXHR, exception) {
 						alert("Incorrect username/password.");

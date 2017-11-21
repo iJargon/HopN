@@ -4,7 +4,7 @@ function deleteEvent(eventID) {
 	$.ajax(
 			{
 				type : "DELETE",
-				url  : "/cs480/event/" + eventID,
+				url  : "/event/" + eventID,
 				data : {
 				},
 				success : function(result) {
@@ -21,7 +21,7 @@ function driverEvent(eventID) {
 	$.ajax(
 		{
 			type : "POST",
-			url : "/cs480/event/" + eventID,
+			url : "/event/" + eventID,
 			data : {
 				"driver" : user
 			},
@@ -39,7 +39,7 @@ function p1Event(eventID) {
 	$.ajax(
 		{
 			type : "POST",
-			url : "/cs480/event/" + eventID,
+			url : "/event/" + eventID,
 			data : {
 				"p1" : user
 			},
@@ -57,7 +57,7 @@ function p2Event(eventID) {
 	$.ajax(
 		{
 			type : "POST",
-			url : "/cs480/event/" + eventID,
+			url : "/event/" + eventID,
 			data : {
 				"p2" : user
 			},
@@ -75,7 +75,7 @@ function p3Event(eventID) {
 	$.ajax(
 		{
 			type : "POST",
-			url : "/cs480/event/" + eventID,
+			url : "/event/" + eventID,
 			data : {
 				"p3" : user
 			},
@@ -93,7 +93,7 @@ function p4Event(eventID) {
 	$.ajax(
 		{
 			type : "POST",
-			url : "/cs480/event/" + eventID,
+			url : "/event/" + eventID,
 			data : {
 				"p4" : user
 			},
@@ -118,7 +118,7 @@ function addEvent() {
 	$.ajax(
 		{
 			type : "POST",
-			url  : "/cs480/event/" + eventID,
+			url  : "/event/" + eventID,
 			data : {
 					"event_name" : eventName,
 					"location" : eventLocation,
@@ -142,7 +142,7 @@ function getEvent(eventId) {
 		$.ajax(
 				{
 					type : "GET",
-					url  : "/cs480/event/" + eventId,
+					url  : "/event/" + eventId,
 					data : {
 					},
 					success : function(result) {

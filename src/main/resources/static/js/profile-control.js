@@ -7,12 +7,12 @@ function bodyOnLoad() {
 	$.ajax(
 		{
 			type : "GET",
-			url  : "/cs480/users/" + userID,
+			url  : "/users/" + userID,
 			data : {
 			},
 			success : function(result) {
 				if (result.userID == "" || result.userID == null) {
-					window.location.href = '/cs480/events';
+					window.location.href = '/events';
 				} else {
 					$('#username').text(result.userID);
 					$('#name').text(result.name);

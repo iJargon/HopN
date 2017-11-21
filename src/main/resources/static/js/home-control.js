@@ -3,7 +3,7 @@ function bodyOnLoad() {
 	$.ajax(
 		{
 			type : "GET",
-			url  : "/cs480/users/list/size",
+			url  : "/users/list/size",
 			data : {
 			},
 			success : function(result) {
@@ -11,7 +11,7 @@ function bodyOnLoad() {
 				$.ajax(
 					{
 						type : "GET",
-						url  : "/cs480/events/list/size",
+						url  : "/events/list/size",
 						data : {
 						},
 						success : function(result1) {
@@ -33,7 +33,7 @@ function healthCheck() {
 	$.ajax(
 			{
 				type : "GET",
-				url  : "/cs480/ping",
+				url  : "/ping",
 				data : {
 				},
 				success : function(result) {
@@ -50,7 +50,7 @@ function deleteUser(userId) {
 	$.ajax(
 			{
 				type : "DELETE",
-				url  : "/cs480/user/" + userId,
+				url  : "/user/" + userId,
 				data : {
 				},
 				success : function(result) {
@@ -74,7 +74,7 @@ function addUser() {
 		$.ajax(
 				{
 					type : "POST",
-					url  : "/cs480/user/" + userID,
+					url  : "/user/" + userID,
 					data : {
 						"name" : userName,
 						"username" : userUserName,
@@ -99,7 +99,7 @@ function getUser(userID) {
 		$.ajax(
 				{
 					type : "GET",
-					url  : "/cs480/user/" + userID,
+					url  : "/user/" + userID,
 					data : {
 					},
 					success : function(result) {
@@ -122,7 +122,7 @@ function deleteEvent(eventID) {
 	$.ajax(
 			{
 				type : "DELETE",
-				url  : "/cs480/event/" + eventID,
+				url  : "/event/" + eventID,
 				data : {
 				},
 				success : function(result) {
@@ -146,7 +146,7 @@ function addEvent() {
 	$.ajax(
 		{
 			type : "POST",
-			url  : "/cs480/event/" + eventID,
+			url  : "/event/" + eventID,
 			data : {
 					"event_name" : eventName,
 					"location" : eventLocation,
@@ -170,7 +170,7 @@ function getEvent(eventId) {
 		$.ajax(
 				{
 					type : "GET",
-					url  : "/cs480/event/" + eventId,
+					url  : "/event/" + eventId,
 					data : {
 					},
 					success : function(result) {
