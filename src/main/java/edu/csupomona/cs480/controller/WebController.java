@@ -1,7 +1,6 @@
 package edu.csupomona.cs480.controller;
 
 import java.util.List;
-import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,32 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.google.common.base.Joiner;
-
-import org.apache.commons.math.stat.DescriptiveStatistics;
-import org.apache.commons.math.stat.SummaryStatistics;
-
 import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.Event;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.EventManager;
 import edu.csupomona.cs480.data.provider.UserManager;
-
-import java.io.IOException;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import net.time4j.*;
-import net.time4j.format.TextWidth;
-import static net.time4j.CalendarUnit.MONTHS;
-import static net.time4j.PlainDate.DAY_OF_MONTH;
-import static net.time4j.PlainDate.DAY_OF_WEEK;
-import static net.time4j.PlainTime.MINUTE_OF_HOUR;
-import static net.time4j.Weekday.WEDNESDAY;
-
 
 /**
  * This is the controller used by Spring framework.
@@ -229,48 +207,6 @@ public class WebController {
 		userManager.updateUser(user);
 		return user;
 	}
-	
-/*	@RequestMapping(value = "/cs480/john", method = RequestMethod.GET)
-	double john() {
-		// You can replace this with other string,
-		// and run the application locally to check your changes
-		// with the URL: http://localhost:8080/
-		//return "Testing seperate pings.";
-		DescriptiveStatistics stats = new DescriptiveStatistics();
-		int[] inputArray = new int[9];
-		
-		for( int i = 0; i < 10; i++) {
-				stats.addValue(inputArray[i]);
-		}
-
-		// Compute some statistics
-		 double mean = stats.getMean();
-		 return mean;
-	}
-	
-	// changing to use Joiner from google guava
-	@RequestMapping(value = "/cs480/nicole", method = RequestMethod.GET)
-	String nicoleSecretText() {
-		// will join specified parameters with specified joiner
-		Joiner joiner = Joiner.on(" | ").skipNulls();
-		return joiner.join("Nicole", "Loves", null, "Chicken", "Nuggets", null);
-	}
-*/
-	@RequestMapping(value = "/nandita", method = RequestMethod.GET)
-	public static
-	String nandita() throws IOException {
-		Document doc = Jsoup.connect("http://en.wikipedia.org/").get();
-		Elements newsHeadlines = doc.select("#mp-itn b a");
-		return ("LATEST NEWS HEADLINES" + "\n" + newsHeadlines);
-	}
-	
-/*	@RequestMapping(value = "/cs480/gretchen", method = RequestMethod.GET)
-	String gretchysString() {
-		PlainDate today = SystemClock.inLocalView().today();
-		PlainDate nextWednesday = today.with(DAY_OF_WEEK.setToNext(WEDNESDAY));
-		
-		return "When is next Wednesday?? " + nextWednesday;
-	}*/
 	
 	/**
 	 * This API deletes the user. It uses HTTP DELETE method.

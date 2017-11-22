@@ -38,7 +38,7 @@
                 </tr>                
                 <tr>
                     <td><input type="text" id="query_id"></td>
-                    <td><input type="text" id="user_password"></td>                   
+                    <td><input type="password" id="user_password"></td>                   
                     <td><button onclick="getUserLogin()">Login</button></td>
                 </tr>
             </table>
@@ -59,7 +59,7 @@
                 <tr>
                     <td><input type="text" id="input_userID"></td>
                     <td><input type="text" id="input_name"></td>
-                    <td><input type="text" id="input_password"></td>
+                    <td><input type="password" id="input_password"></td>
                     <td><input type="text" id="input_phone"></td>                    
                     <td><button onclick="addUserLogin()">Sign Up</button></td>
                 </tr>

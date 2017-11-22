@@ -2,7 +2,7 @@
 
 function bodyOnLoad() {
 	var urlPathArray = window.location.pathname.split('/');
-	var userID = urlPathArray[3];
+	var userID = urlPathArray[2];
 	
 	$.ajax(
 		{
@@ -11,6 +11,9 @@ function bodyOnLoad() {
 			data : {
 			},
 			success : function(result) {
+				// $('#username').text(result.userID);
+				// $('#name').text(result.name);
+				// $('#phone').text(result.phone);
 				if (result.userID == "" || result.userID == null) {
 					window.location.href = '/events';
 				} else {
