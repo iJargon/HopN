@@ -14,26 +14,26 @@ public class EventManagerTest {
 	public void testUpdateEvent() {
 		EventManager eventmanager = new FSEventManager();
 		Event event = new Event();
-		event.setDate("today");
-		event.setEnd_time("10pm");
-		event.setEventID("party");
-		event.setName("Halloween Party");
+		event.setDate("Feb 3");
+		event.setEnd_time("5 pm");
+		event.setEventID("PolyFounders");
+		event.setName("HackPoly 2018");
 		event.setLocation("CPP");
-		event.setStart_time("6pm");
+		event.setStart_time("8 am");
 		eventmanager.updateEvent(event);
 		
-		assertEquals("6pm", eventmanager.getEvent("party").getStart_time());
+		assertEquals("8 am", eventmanager.getEvent("PolyFounders").getStart_time());
 	}
 	
 	@Test
 	public void testGetEvent() {
 		EventManager eventmanager = new FSEventManager();
 		Event event = new Event();
-		event.setDate("tomorrow");
+		event.setDate("Tomorrow");
 		event.setEnd_time("4pm");
-		event.setEventID("123");
+		event.setEventID("Meeting");
 		event.setName("Scrum");
-		event.setLocation("work");
+		event.setLocation("LA");
 		event.setStart_time("11am");
 		eventmanager.updateEvent(event);
 		
